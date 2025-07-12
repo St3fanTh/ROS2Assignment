@@ -6,7 +6,7 @@ from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
 from moveit_configs_utils import MoveItConfigsBuilder
 
-#StefanTest
+
 
 def generate_launch_description():
     moveit_config = (
