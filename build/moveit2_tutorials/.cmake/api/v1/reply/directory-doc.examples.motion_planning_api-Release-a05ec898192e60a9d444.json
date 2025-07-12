@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"doc/examples/motion_planning_api/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/motion_planning_api/motion_planning_api_tutorial"
+			],
+			"targetId" : "motion_planning_api_tutorial::@03bc4781c2676d925853",
+			"targetIndex" : 6,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "motion_planning_api_tutorial::@03bc4781c2676d925853",
+				"index" : 6
+			},
+			"destination" : "lib/moveit2_tutorials",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/motion_planning_api/launch"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "doc/examples/motion_planning_api",
+		"source" : "doc/examples/motion_planning_api"
+	}
+}

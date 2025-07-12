@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"doc/examples/motion_planning_python_api/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/motion_planning_python_api/scripts/motion_planning_python_api_tutorial.py",
+				"doc/examples/motion_planning_python_api/scripts/motion_planning_python_api_planning_scene.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/motion_planning_python_api/config",
+				"doc/examples/motion_planning_python_api/launch"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "doc/examples/motion_planning_python_api",
+		"source" : "doc/examples/motion_planning_python_api"
+	}
+}

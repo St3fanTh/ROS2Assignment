@@ -1,0 +1,329 @@
+[0.535s] Invoking command in '/home/login/ws_moveit/build/moveit2_tutorials': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/login/ws_moveit/src/moveit2_tutorials -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/moveit2_tutorials
+[0.709s] -- The C compiler identification is GNU 13.3.0
+[1.543s] -- The CXX compiler identification is GNU 13.3.0
+[2.298s] -- Detecting C compiler ABI info
+[2.708s] -- Detecting C compiler ABI info - done
+[2.719s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.720s] -- Detecting C compile features
+[2.720s] -- Detecting C compile features - done
+[2.882s] -- Detecting CXX compiler ABI info
+[3.272s] -- Detecting CXX compiler ABI info - done
+[3.285s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.286s] -- Detecting CXX compile features
+[3.286s] -- Detecting CXX compile features - done
+[3.294s] -- Found moveit_common: 2.12.3 (/opt/ros/jazzy/share/moveit_common/cmake)
+[3.301s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.513s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.793s] [0mmoveit2_tutorials: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[3.810s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[3.818s] -- Found control_msgs: 5.4.1 (/opt/ros/jazzy/share/control_msgs/cmake)
+[4.180s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[4.207s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[4.244s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.277s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.564s] -- Found interactive_markers: 2.5.4 (/opt/ros/jazzy/share/interactive_markers/cmake)
+[4.661s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[4.669s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.815s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[5.145s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[5.317s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.712s] -- Found moveit_core: 2.12.3 (/opt/ros/jazzy/share/moveit_core/cmake)
+[6.049s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[7.868s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[7.901s] -- Found rclcpp_lifecycle: 28.1.10 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[7.966s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[8.175s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[8.175s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[8.607s] -- Found moveit_ros_planning: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+[8.615s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[8.679s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[8.687s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[8.714s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[8.760s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[8.822s] -- Found moveit_ros_trajectory_cache: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_trajectory_cache/cmake)
+[8.841s] -- Found moveit_servo: 2.12.3 (/opt/ros/jazzy/share/moveit_servo/cmake)
+[8.898s] -- Found moveit_task_constructor_core: 0.1.3 (/home/login/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+[8.991s] -- Found moveit_visual_tools: 4.1.2 (/opt/ros/jazzy/share/moveit_visual_tools/cmake)
+[9.262s] -- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[9.265s] -- Found OGRE
+[9.265s] --   static     : OFF
+[9.265s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[9.265s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[9.265s] --   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+[9.265s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[9.266s] -- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+[9.266s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[9.266s] -- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+[9.266s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[9.266s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[9.267s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[9.267s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[13.813s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[15.113s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[23.048s] -- Found X11: /usr/include   
+[23.049s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[23.371s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[23.371s] -- Looking for gethostbyname
+[23.678s] -- Looking for gethostbyname - found
+[23.678s] -- Looking for connect
+[23.990s] -- Looking for connect - found
+[23.990s] -- Looking for remove
+[24.315s] -- Looking for remove - found
+[24.315s] -- Looking for shmat
+[24.633s] -- Looking for shmat - found
+[24.633s] -- Looking for IceConnectionNumber in ICE
+[24.949s] -- Looking for IceConnectionNumber in ICE - found
+[25.071s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[25.302s] -- Found warehouse_ros_sqlite: 1.0.5 (/opt/ros/jazzy/share/warehouse_ros_sqlite/cmake)
+[30.077s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[30.111s] -- Found ament_cmake_gtest: 2.5.4 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[30.227s] -- Found ros_testing: 0.6.0 (/opt/ros/jazzy/share/ros_testing/cmake)
+[30.260s] -- Found launch_testing_ament_cmake: 3.4.5 (/opt/ros/jazzy/share/launch_testing_ament_cmake/cmake)
+[30.310s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[31.347s] -- Found PythonExtra: /usr/bin/python3  
+[31.393s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[31.457s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[31.490s] -- Found Threads: TRUE  
+[31.873s] -- Configuring done (31.3s)
+[36.417s] -- Generating done (3.8s)
+[36.895s] -- Build files have been written to: /home/login/ws_moveit/build/moveit2_tutorials
+[37.077s] Invoked command in '/home/login/ws_moveit/build/moveit2_tutorials' returned '0': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/login/ws_moveit/src/moveit2_tutorials -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/moveit2_tutorials
+[37.094s] Invoking command in '/home/login/ws_moveit/build/moveit2_tutorials': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/login/ws_moveit/build/moveit2_tutorials -- -j12 -l12
+[37.514s] [  2%] [32mBuilding CXX object doc/examples/motion_planning_api/CMakeFiles/motion_planning_api_tutorial.dir/src/motion_planning_api_tutorial.cpp.o[0m
+[37.554s] [  4%] [32mBuilding CXX object doc/examples/move_group_interface/CMakeFiles/move_group_interface_tutorial.dir/src/move_group_interface_tutorial.cpp.o[0m
+[37.576s] [  7%] [32mBuilding CXX object doc/examples/collision_environments/CMakeFiles/collision_scene_example.dir/src/collision_scene_example.cpp.o[0m
+[37.589s] [  9%] [32mBuilding CXX object doc/examples/moveit_cpp/CMakeFiles/moveit_cpp_tutorial.dir/src/moveit_cpp_tutorial.cpp.o[0m
+[37.592s] [ 11%] [32mBuilding CXX object doc/examples/planning_scene/CMakeFiles/planning_scene_tutorial.dir/src/planning_scene_tutorial.cpp.o[0m
+[37.607s] [ 14%] [32mBuilding CXX object doc/examples/motion_planning_pipeline/CMakeFiles/motion_planning_pipeline_tutorial.dir/src/motion_planning_pipeline_tutorial.cpp.o[0m
+[37.734s] [ 16%] [32mBuilding CXX object doc/examples/planning_scene_ros_api/CMakeFiles/planning_scene_ros_api_tutorial.dir/src/planning_scene_ros_api_tutorial.cpp.o[0m
+[37.822s] [ 19%] [32mBuilding CXX object doc/examples/realtime_servo/CMakeFiles/pose_tracking_tutorial.dir/src/pose_tracking_tutorial.cpp.o[0m
+[37.844s] [ 21%] [32mBuilding CXX object doc/how_to_guides/kinematics_cost_function/CMakeFiles/kinematics_cost_function_tutorial.dir/src/kinematics_cost_function_tutorial.cpp.o[0m
+[37.923s] [ 23%] [32mBuilding CXX object doc/how_to_guides/parallel_planning/CMakeFiles/parallel_planning_example.dir/src/parallel_planning_main.cpp.o[0m
+[38.325s] [ 26%] [32mBuilding CXX object doc/examples/robot_model_and_robot_state/CMakeFiles/robot_model_and_robot_state_tutorial.dir/src/robot_model_and_robot_state_tutorial.cpp.o[0m
+[39.123s] [ 28%] [32mBuilding CXX object doc/how_to_guides/pilz_industrial_motion_planner/CMakeFiles/pilz_move_group.dir/src/pilz_move_group.cpp.o[0m
+[64.384s] [ 30%] [32m[1mLinking CXX executable robot_model_and_robot_state_tutorial[0m
+[66.644s] [ 30%] Built target robot_model_and_robot_state_tutorial
+[73.473s] [ 33%] [32m[1mLinking CXX executable planning_scene_tutorial[0m
+[75.625s] [ 33%] Built target planning_scene_tutorial
+[77.063s] [ 35%] [32m[1mLinking CXX executable collision_scene_example[0m
+[78.067s] [ 38%] [32m[1mLinking CXX executable planning_scene_ros_api_tutorial[0m
+[78.305s] [ 38%] Built target collision_scene_example
+[79.772s] [ 38%] Built target planning_scene_ros_api_tutorial
+[81.998s] [ 40%] [32m[1mLinking CXX executable moveit_cpp_tutorial[0m
+[83.233s] [ 42%] [32m[1mLinking CXX executable move_group_interface_tutorial[0m
+[83.564s] [ 45%] [32m[1mLinking CXX executable kinematics_cost_function_tutorial[0m
+[83.953s] [ 45%] Built target moveit_cpp_tutorial
+[84.589s] [ 47%] [32m[1mLinking CXX executable pilz_move_group[0m
+[84.990s] [ 47%] Built target move_group_interface_tutorial
+[85.260s] [ 47%] Built target kinematics_cost_function_tutorial
+[85.926s] [ 47%] Built target pilz_move_group
+[88.813s] [ 50%] [32m[1mLinking CXX executable pose_tracking_tutorial[0m
+[89.850s] [ 50%] Built target pose_tracking_tutorial
+[90.559s] [ 52%] [32m[1mLinking CXX executable parallel_planning_example[0m
+[91.505s] [ 54%] [32m[1mLinking CXX executable motion_planning_pipeline_tutorial[0m
+[91.947s] [ 54%] Built target parallel_planning_example
+[93.636s] [ 54%] Built target motion_planning_pipeline_tutorial
+[94.886s] [ 57%] [32m[1mLinking CXX executable motion_planning_api_tutorial[0m
+[96.166s] [ 57%] Built target motion_planning_api_tutorial
+[96.196s] [ 59%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[106.332s] [ 61%] [32m[1mLinking CXX static library libgtest.a[0m
+[106.390s] [ 61%] Built target gtest
+[106.417s] [ 64%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[107.411s] [ 66%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[107.450s] [ 66%] Built target gtest_main
+[107.481s] [ 69%] [32mBuilding CXX object doc/tutorials/pick_and_place_with_moveit_task_constructor/CMakeFiles/minimal_mtc_tutorial.dir/src/minimal.cpp.o[0m
+[123.426s] [ 71%] [32m[1mLinking CXX executable minimal_mtc_tutorial[0m
+[124.352s] [ 71%] Built target minimal_mtc_tutorial
+[124.393s] [ 73%] [32mBuilding CXX object doc/tutorials/quickstart_in_rviz/CMakeFiles/bringup_test.dir/test/bringup_test.cpp.o[0m
+[124.399s] [ 76%] [32mBuilding CXX object doc/how_to_guides/trajectory_cache/CMakeFiles/trajectory_cache_demo.dir/src/trajectory_cache_demo.cpp.o[0m
+[124.401s] [ 78%] [32mBuilding CXX object doc/tutorials/pick_and_place_with_moveit_task_constructor/CMakeFiles/mtc_tutorial.dir/src/mtc_node.cpp.o[0m
+[124.409s] [ 80%] [32mBuilding CXX object doc/how_to_guides/pilz_industrial_motion_planner/CMakeFiles/pilz_sequence.dir/src/pilz_sequence.cpp.o[0m
+[124.410s] [ 83%] [32mBuilding CXX object doc/how_to_guides/pilz_industrial_motion_planner/CMakeFiles/pilz_mtc.dir/src/pilz_mtc.cpp.o[0m
+[124.427s] [ 85%] [32mBuilding CXX object doc/how_to_guides/using_ompl_constrained_planning/CMakeFiles/ompl_constrained_planning.dir/src/ompl_constrained_planning_tutorial.cpp.o[0m
+[129.619s] In file included from [01m[K/home/login/ws_moveit/src/moveit2_tutorials/doc/how_to_guides/trajectory_cache/src/trajectory_cache_demo.cpp:97[m[K:
+[129.619s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[129.620s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[129.620s]       |                                                                             [01;36m[K^[m[K
+[141.544s] [01m[K/home/login/ws_moveit/src/moveit2_tutorials/doc/how_to_guides/trajectory_cache/src/trajectory_cache_demo.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[141.544s] [01m[K/home/login/ws_moveit/src/moveit2_tutorials/doc/how_to_guides/trajectory_cache/src/trajectory_cache_demo.cpp:981:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[141.544s]   981 |             [01;35m[Kmove_group.computeCartesianPath(cartesian_path_request.waypoints, cartesian_max_step,[m[K
+[141.544s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[141.544s]   982 | [01;35m[K                                            cartesian_jump_threshold, cartesian_path_response.solution)[m[K;
+[141.544s]       |                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[141.545s] In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[141.546s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[141.546s]   765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[141.546s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[144.156s] [ 88%] [32m[1mLinking CXX executable bringup_test[0m
+[145.724s] [ 88%] Built target bringup_test
+[150.802s] [ 90%] [32m[1mLinking CXX executable pilz_mtc[0m
+[151.080s] [ 92%] [32m[1mLinking CXX executable ompl_constrained_planning[0m
+[151.721s] [ 92%] Built target pilz_mtc
+[151.763s] [ 95%] [32m[1mLinking CXX executable mtc_tutorial[0m
+[152.469s] [ 95%] Built target ompl_constrained_planning
+[152.607s] [ 95%] Built target mtc_tutorial
+[153.265s] [ 97%] [32m[1mLinking CXX executable trajectory_cache_demo[0m
+[154.255s] [ 97%] Built target trajectory_cache_demo
+[157.715s] [100%] [32m[1mLinking CXX executable pilz_sequence[0m
+[158.816s] [100%] Built target pilz_sequence
+[158.835s] Invoked command in '/home/login/ws_moveit/build/moveit2_tutorials' returned '0': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/login/ws_moveit/build/moveit2_tutorials -- -j12 -l12
+[158.837s] Invoking command in '/home/login/ws_moveit/build/moveit2_tutorials': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/login/ws_moveit/build/moveit2_tutorials
+[158.847s] -- Install configuration: "Release"
+[158.849s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/collision_scene_example
+[158.849s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/collision_scene_example" to ""
+[158.850s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/urdf
+[158.851s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/urdf/realsense_d435
+[158.851s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/urdf/realsense_d435/camera.urdf.xacro
+[158.851s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/urdf/realsense_d435/macros.xacro
+[158.851s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.852s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/perception_pipeline_demo.launch.py
+[158.852s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/depth_camera_environment.launch.py
+[158.852s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/meshes
+[158.852s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/meshes/d435.dae
+[158.873s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.873s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/sensors_3d.yaml
+[158.873s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/worlds
+[158.873s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/worlds/perception_pipeline_demo.world
+[158.874s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/rviz2
+[158.874s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/rviz2/depth_camera_environment.rviz
+[158.875s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.875s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/jupyter_notebook_prototyping.yaml
+[158.875s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/jupyter_notebook_prototyping.rviz
+[158.875s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.875s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/jupyter_notebook_prototyping.launch.py
+[158.876s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/src
+[158.876s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/src/moveit_notebook_tutorial.ipynb
+[158.876s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_api_tutorial
+[158.878s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_api_tutorial" to ""
+[158.878s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.878s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/motion_planning_api_tutorial.launch.py
+[158.879s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_pipeline_tutorial
+[158.880s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_pipeline_tutorial" to ""
+[158.881s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.881s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/motion_planning_pipeline_tutorial.launch.py
+[158.881s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_python_api_tutorial.py
+[158.882s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/motion_planning_python_api_planning_scene.py
+[158.882s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.882s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/motion_planning_python_api_tutorial.rviz
+[158.882s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/motion_planning_python_api_tutorial.yaml
+[158.883s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.883s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/motion_planning_python_api_tutorial.launch.py
+[158.883s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/move_group_interface_tutorial
+[158.884s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/move_group_interface_tutorial" to ""
+[158.884s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.884s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/move_group.rviz
+[158.884s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/move_group.launch.py
+[158.884s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/move_group_interface_tutorial.launch.py
+[158.885s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/moveit_cpp_tutorial
+[158.885s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/moveit_cpp_tutorial" to ""
+[158.886s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.886s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/moveit_cpp_tutorial.rviz
+[158.886s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/moveit_cpp_tutorial.launch.py
+[158.886s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.887s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/moveit_cpp.yaml
+[158.887s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/planning_scene_tutorial
+[158.887s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/planning_scene_tutorial" to ""
+[158.887s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.887s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/planning_scene_tutorial.launch.py
+[158.888s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/planning_scene_ros_api_tutorial
+[158.889s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/planning_scene_ros_api_tutorial" to ""
+[158.889s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.889s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/planning_scene_ros_api_tutorial.launch.py
+[158.890s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pose_tracking_tutorial
+[158.891s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pose_tracking_tutorial" to ""
+[158.891s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.892s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/pose_tracking_tutorial.launch.py
+[158.892s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.892s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/demo_rviz_config.rviz
+[158.892s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/panda_simulated_config.yaml
+[158.892s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/robot_model_and_robot_state_tutorial
+[158.893s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/robot_model_and_robot_state_tutorial" to ""
+[158.894s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.894s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/robot_model_and_robot_state_tutorial.launch.py
+[158.894s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.895s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/run_benchmarks.launch.py
+[158.895s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.895s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/benchmarks.yaml
+[158.896s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/benchmarking_moveit_cpp.yaml
+[158.896s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.896s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/isaac_moveit.py
+[158.896s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/python.sh
+[158.896s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/isaac_demo.launch.py
+[158.896s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.896s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/panda_moveit_config.rviz
+[158.897s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/kinematics_cost_function_tutorial
+[158.897s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/kinematics_cost_function_tutorial" to ""
+[158.897s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.898s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/kinematics_cost_function_tutorial.launch.py
+[158.898s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/parallel_planning_example
+[158.899s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/parallel_planning_example" to ""
+[158.899s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.900s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/parallel_planning_example.launch.py
+[158.900s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.900s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/panda_test_db.sqlite
+[158.928s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/parallel_planning_moveit_cpp.yaml
+[158.928s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/parallel_planning_config.rviz
+[158.929s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.929s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/chomp_demo.launch.py
+[158.929s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.929s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/moveit_chomp.rviz
+[158.930s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.930s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/persistent_scenes_demo.launch.py
+[158.931s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_move_group
+[158.931s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_move_group" to ""
+[158.932s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_mtc
+[158.932s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_mtc" to ""
+[158.933s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_sequence
+[158.934s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/pilz_sequence" to ""
+[158.934s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.934s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/pilz_mtc.launch.py
+[158.934s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/pilz_moveit.launch.py
+[158.935s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/trajectory_cache_demo
+[158.936s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/trajectory_cache_demo" to ""
+[158.936s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.936s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/trajectory_cache.rviz
+[158.936s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/trajectory_cache_demo.launch.py
+[158.937s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/trajectory_cache_move_group.launch.py
+[158.937s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.937s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/trajectory_cache_joint_limits.yaml
+[158.937s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/ompl_constrained_planning
+[158.938s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/ompl_constrained_planning" to ""
+[158.938s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.938s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/ompl_constrained_planning.launch.py
+[158.938s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/ompl_constrained_planning.rviz
+[158.939s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/mtc_tutorial
+[158.940s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/mtc_tutorial" to ""
+[158.940s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/minimal_mtc_tutorial
+[158.940s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/moveit2_tutorials/lib/moveit2_tutorials/minimal_mtc_tutorial" to ""
+[158.940s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.941s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/mtc_demo_minimal.launch.py
+[158.941s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/mtc_demo.launch.py
+[158.941s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/pick_place_demo.launch.py
+[158.942s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/mtc.rviz
+[158.942s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.942s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/kinova_moveit_config_demo_empty.rviz
+[158.942s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/kinova_hello_moveit.rviz
+[158.942s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/demo.launch.py
+[158.942s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/kinova_moveit_config_demo.rviz
+[158.943s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch
+[158.943s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/launch/demo_pick_ik.launch.py
+[158.944s] -- Up-to-date: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config
+[158.944s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/config/kinematics_pick_ik.yaml
+[158.945s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/ament_index/resource_index/package_run_dependencies/moveit2_tutorials
+[158.946s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/ament_index/resource_index/parent_prefix_path/moveit2_tutorials
+[158.947s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/environment/ament_prefix_path.sh
+[158.947s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/environment/ament_prefix_path.dsv
+[158.948s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/environment/path.sh
+[158.948s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/environment/path.dsv
+[158.948s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/local_setup.bash
+[158.949s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/local_setup.sh
+[158.949s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/local_setup.zsh
+[158.950s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/local_setup.dsv
+[158.950s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/package.dsv
+[158.951s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/ament_index/resource_index/packages/moveit2_tutorials
+[158.952s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/cmake/ament_cmake_export_dependencies-extras.cmake
+[158.952s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/cmake/ament_cmake_export_include_directories-extras.cmake
+[158.953s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/cmake/moveit2_tutorialsConfig.cmake
+[158.953s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/cmake/moveit2_tutorialsConfig-version.cmake
+[158.953s] -- Installing: /home/login/ws_moveit/install/moveit2_tutorials/share/moveit2_tutorials/package.xml
+[158.956s] Invoked command in '/home/login/ws_moveit/build/moveit2_tutorials' returned '0': CMAKE_PREFIX_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy LD_LIBRARY_PATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib PYTHONPATH=/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ws_moveit/install/move_it/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/login/ws_moveit/build/moveit2_tutorials

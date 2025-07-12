@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"doc/examples/collision_environments/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/collision_environments/collision_scene_example"
+			],
+			"targetId" : "collision_scene_example::@b65366b62adc76b8cb1e",
+			"targetIndex" : 1,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "doc/examples/collision_environments",
+		"source" : "doc/examples/collision_environments"
+	}
+}

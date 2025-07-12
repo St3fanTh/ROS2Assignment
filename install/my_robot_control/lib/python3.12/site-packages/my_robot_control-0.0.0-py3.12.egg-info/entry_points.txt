@@ -1,0 +1,3 @@
+[console_scripts]
+cartesian_commander = my_robot_control.cartesian_commander:main
+home_commander = my_robot_control.home_commander:main

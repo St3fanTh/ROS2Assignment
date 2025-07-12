@@ -1,0 +1,70 @@
+[0.032s] Invoking command in '/home/login/ws_moveit/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake /home/login/ws_moveit/src/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/rviz_marker_tools
+[0.267s] -- The C compiler identification is GNU 13.3.0
+[1.216s] -- The CXX compiler identification is GNU 13.3.0
+[2.030s] -- Detecting C compiler ABI info
+[2.340s] -- Detecting C compiler ABI info - done
+[2.350s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.351s] -- Detecting C compile features
+[2.351s] -- Detecting C compile features - done
+[2.469s] -- Detecting CXX compiler ABI info
+[2.815s] -- Detecting CXX compiler ABI info - done
+[2.827s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.827s] -- Detecting CXX compile features
+[2.828s] -- Detecting CXX compile features - done
+[2.846s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.033s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.222s] -- Found moveit_common: 2.12.3 (/opt/ros/jazzy/share/moveit_common/cmake)
+[3.320s] [0mrviz_marker_tools: You did not request a specific build type: Choosing 'Release' for maximum performance[0m
+[3.325s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[3.338s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.343s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[3.673s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.699s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.728s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.757s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.836s] -- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.970s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.978s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.120s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[4.547s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.781s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.225s] -- Found tf2_eigen: 0.36.12 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+[5.471s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[5.560s] -- Configuring done (5.5s)
+[5.582s] -- Generating done (0.0s)
+[5.588s] -- Build files have been written to: /home/login/ws_moveit/build/rviz_marker_tools
+[5.600s] Invoked command in '/home/login/ws_moveit/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake /home/login/ws_moveit/src/moveit_task_constructor/rviz_marker_tools -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/rviz_marker_tools
+[5.602s] Invoking command in '/home/login/ws_moveit/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/build/rviz_marker_tools -- -j12 -l12
+[5.671s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz_marker_tools.dir/src/marker_creation.cpp.o[0m
+[12.498s] [100%] [32m[1mLinking CXX shared library librviz_marker_tools.so[0m
+[13.122s] [100%] Built target rviz_marker_tools
+[13.160s] Invoked command in '/home/login/ws_moveit/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/build/rviz_marker_tools -- -j12 -l12
+[13.205s] Invoking command in '/home/login/ws_moveit/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --install /home/login/ws_moveit/build/rviz_marker_tools
+[13.235s] -- Install configuration: "Release"
+[13.235s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/include
+[13.236s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/include/rviz_marker_tools
+[13.237s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/include/rviz_marker_tools/marker_creation.h
+[13.239s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/lib/librviz_marker_tools.so
+[13.240s] -- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/install/rviz_marker_tools/lib/librviz_marker_tools.so" to ""
+[13.244s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/library_path.sh
+[13.248s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/library_path.dsv
+[13.253s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/ament_index/resource_index/package_run_dependencies/rviz_marker_tools
+[13.254s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/ament_index/resource_index/parent_prefix_path/rviz_marker_tools
+[13.255s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/ament_prefix_path.sh
+[13.256s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/ament_prefix_path.dsv
+[13.258s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/path.sh
+[13.259s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/environment/path.dsv
+[13.259s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.bash
+[13.261s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.sh
+[13.261s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.zsh
+[13.262s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/local_setup.dsv
+[13.263s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/package.dsv
+[13.271s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/ament_index/resource_index/packages/rviz_marker_tools
+[13.273s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport.cmake
+[13.275s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsTargetsExport-release.cmake
+[13.275s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/ament_cmake_export_targets-extras.cmake
+[13.275s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[13.275s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsConfig.cmake
+[13.275s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/cmake/rviz_marker_toolsConfig-version.cmake
+[13.276s] -- Installing: /home/login/ws_moveit/install/rviz_marker_tools/share/rviz_marker_tools/package.xml
+[13.298s] Invoked command in '/home/login/ws_moveit/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --install /home/login/ws_moveit/build/rviz_marker_tools

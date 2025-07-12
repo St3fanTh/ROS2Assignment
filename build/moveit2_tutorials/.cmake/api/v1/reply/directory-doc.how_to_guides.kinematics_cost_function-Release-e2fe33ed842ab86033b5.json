@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"doc/how_to_guides/kinematics_cost_function/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/how_to_guides/kinematics_cost_function/kinematics_cost_function_tutorial"
+			],
+			"targetId" : "kinematics_cost_function_tutorial::@d35598d7b85a6bb90837",
+			"targetIndex" : 4,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "kinematics_cost_function_tutorial::@d35598d7b85a6bb90837",
+				"index" : 4
+			},
+			"destination" : "lib/moveit2_tutorials",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/how_to_guides/kinematics_cost_function/launch"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "doc/how_to_guides/kinematics_cost_function",
+		"source" : "doc/how_to_guides/kinematics_cost_function"
+	}
+}

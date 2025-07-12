@@ -1,0 +1,48 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"doc/examples/perception_pipeline/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "share/moveit2_tutorials",
+			"paths" : 
+			[
+				"doc/examples/perception_pipeline/urdf",
+				"doc/examples/perception_pipeline/launch",
+				"doc/examples/perception_pipeline/meshes",
+				"doc/examples/perception_pipeline/config",
+				"doc/examples/perception_pipeline/worlds",
+				"doc/examples/perception_pipeline/rviz2"
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "doc/examples/perception_pipeline",
+		"source" : "doc/examples/perception_pipeline"
+	}
+}

@@ -1,0 +1,32 @@
+[1.036s] Invoking command in '/home/login/ws_moveit/src/move_it': PYTHONPATH=/home/login/ws_moveit/src/build/move_it/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/move_it build --build-base /home/login/ws_moveit/src/build/move_it/build install --record /home/login/ws_moveit/src/build/move_it/install.log --single-version-externally-managed install_data
+[1.288s] running egg_info
+[1.289s] creating ../build/move_it/move_it.egg-info
+[1.308s] writing ../build/move_it/move_it.egg-info/PKG-INFO
+[1.308s] writing dependency_links to ../build/move_it/move_it.egg-info/dependency_links.txt
+[1.309s] writing requirements to ../build/move_it/move_it.egg-info/requires.txt
+[1.309s] writing top-level names to ../build/move_it/move_it.egg-info/top_level.txt
+[1.309s] writing manifest file '../build/move_it/move_it.egg-info/SOURCES.txt'
+[1.356s] reading manifest file '../build/move_it/move_it.egg-info/SOURCES.txt'
+[1.357s] writing manifest file '../build/move_it/move_it.egg-info/SOURCES.txt'
+[1.357s] running build
+[1.357s] running build_py
+[1.357s] creating /home/login/ws_moveit/src/build/move_it/build
+[1.358s] creating /home/login/ws_moveit/src/build/move_it/build/lib
+[1.358s] creating /home/login/ws_moveit/src/build/move_it/build/lib/move_it
+[1.358s] copying move_it/__init__.py -> /home/login/ws_moveit/src/build/move_it/build/lib/move_it
+[1.359s] running install
+[1.366s] running install_lib
+[1.385s] creating /home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it
+[1.386s] copying /home/login/ws_moveit/src/build/move_it/build/lib/move_it/__init__.py -> /home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it
+[1.387s] byte-compiling /home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it/__init__.py to __init__.cpython-312.pyc
+[1.388s] running install_data
+[1.388s] creating /home/login/ws_moveit/src/install/move_it/share/ament_index
+[1.388s] creating /home/login/ws_moveit/src/install/move_it/share/ament_index/resource_index
+[1.388s] creating /home/login/ws_moveit/src/install/move_it/share/ament_index/resource_index/packages
+[1.389s] copying resource/move_it -> /home/login/ws_moveit/src/install/move_it/share/ament_index/resource_index/packages
+[1.389s] copying package.xml -> /home/login/ws_moveit/src/install/move_it/share/move_it
+[1.389s] running install_egg_info
+[1.409s] Copying ../build/move_it/move_it.egg-info to /home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it-0.0.0-py3.12.egg-info
+[1.411s] running install_scripts
+[1.537s] writing list of installed files to '/home/login/ws_moveit/src/build/move_it/install.log'
+[1.565s] Invoked command in '/home/login/ws_moveit/src/move_it' returned '0': PYTHONPATH=/home/login/ws_moveit/src/build/move_it/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/move_it build --build-base /home/login/ws_moveit/src/build/move_it/build install --record /home/login/ws_moveit/src/build/move_it/install.log --single-version-externally-managed install_data

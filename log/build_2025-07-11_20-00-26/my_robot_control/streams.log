@@ -1,0 +1,26 @@
+[1.336s] Invoking command in '/home/login/ws_moveit/build/my_robot_control': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build --no-deps symlink_data
+[1.827s] running develop
+[2.072s] running egg_info
+[2.072s] creating my_robot_control.egg-info
+[2.106s] writing my_robot_control.egg-info/PKG-INFO
+[2.106s] writing dependency_links to my_robot_control.egg-info/dependency_links.txt
+[2.106s] writing entry points to my_robot_control.egg-info/entry_points.txt
+[2.107s] writing requirements to my_robot_control.egg-info/requires.txt
+[2.107s] writing top-level names to my_robot_control.egg-info/top_level.txt
+[2.107s] writing manifest file 'my_robot_control.egg-info/SOURCES.txt'
+[2.157s] reading manifest file 'my_robot_control.egg-info/SOURCES.txt'
+[2.158s] writing manifest file 'my_robot_control.egg-info/SOURCES.txt'
+[2.193s] running build_ext
+[2.193s] Creating /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my-robot-control.egg-link (link to .)
+[2.194s] Installing home_commander script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[2.196s] 
+[2.196s] Installed /home/login/ws_moveit/build/my_robot_control
+[2.196s] running symlink_data
+[2.196s] creating /home/login/ws_moveit/install/my_robot_control/share
+[2.197s] creating /home/login/ws_moveit/install/my_robot_control/share/ament_index
+[2.198s] creating /home/login/ws_moveit/install/my_robot_control/share/ament_index/resource_index
+[2.198s] creating /home/login/ws_moveit/install/my_robot_control/share/ament_index/resource_index/packages
+[2.198s] symbolically linking /home/login/ws_moveit/build/my_robot_control/resource/my_robot_control -> /home/login/ws_moveit/install/my_robot_control/share/ament_index/resource_index/packages
+[2.199s] creating /home/login/ws_moveit/install/my_robot_control/share/my_robot_control
+[2.200s] symbolically linking /home/login/ws_moveit/build/my_robot_control/package.xml -> /home/login/ws_moveit/install/my_robot_control/share/my_robot_control
+[2.269s] Invoked command in '/home/login/ws_moveit/build/my_robot_control' returned '0': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build --no-deps symlink_data

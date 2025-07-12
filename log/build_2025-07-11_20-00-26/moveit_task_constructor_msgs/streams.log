@@ -1,0 +1,30 @@
+[0.030s] Invoking command in '/home/login/ws_moveit/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake /home/login/ws_moveit/src/moveit_task_constructor/msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/moveit_task_constructor_msgs
+[0.053s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.092s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.214s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.225s] -- Found builtin_interfaces: 2.0.2 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+[0.586s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.598s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.620s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.640s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.658s] -- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+[1.027s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.044s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.046s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[1.861s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.733s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.094s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.096s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.500s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[3.677s] -- Configuring done (3.6s)
+[3.918s] -- Generating done (0.2s)
+[3.957s] -- Build files have been written to: /home/login/ws_moveit/build/moveit_task_constructor_msgs
+[3.991s] Invoked command in '/home/login/ws_moveit/build/moveit_task_constructor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake /home/login/ws_moveit/src/moveit_task_constructor/msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/install/moveit_task_constructor_msgs
+[3.999s] Invoking command in '/home/login/ws_moveit/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/build/moveit_task_constructor_msgs -- -j12 -l12
+[4.109s] failed to create symbolic link '/home/login/ws_moveit/build/moveit_task_constructor_msgs/ament_cmake_python/moveit_task_constructor_msgs/moveit_task_constructor_msgs' because existing path cannot be removed: Is a directory
+[4.109s] [  1%] Built target moveit_task_constructor_msgs__rosidl_generator_type_description
+[4.112s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs] Error 1
+[4.113s] gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_moveit_task_constructor_msgs.dir/all] Error 2
+[4.113s] gmake[1]: *** Waiting for unfinished jobs....
+[4.113s] gmake: *** [Makefile:146: all] Error 2
+[4.118s] Invoked command in '/home/login/ws_moveit/build/moveit_task_constructor_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/ws_moveit/install/move_it:/home/login/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/build/moveit_task_constructor_msgs -- -j12 -l12

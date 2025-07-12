@@ -1,0 +1,17 @@
+[0.938s] Invoking command in '/home/login/ws_moveit/build/my_robot_control': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build --no-deps symlink_data
+[1.273s] running develop
+[1.535s] running egg_info
+[1.570s] writing my_robot_control.egg-info/PKG-INFO
+[1.570s] writing dependency_links to my_robot_control.egg-info/dependency_links.txt
+[1.570s] writing entry points to my_robot_control.egg-info/entry_points.txt
+[1.571s] writing requirements to my_robot_control.egg-info/requires.txt
+[1.571s] writing top-level names to my_robot_control.egg-info/top_level.txt
+[1.617s] reading manifest file 'my_robot_control.egg-info/SOURCES.txt'
+[1.619s] writing manifest file 'my_robot_control.egg-info/SOURCES.txt'
+[1.642s] running build_ext
+[1.643s] Creating /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my-robot-control.egg-link (link to .)
+[1.644s] Installing home_commander script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.644s] 
+[1.644s] Installed /home/login/ws_moveit/build/my_robot_control
+[1.644s] running symlink_data
+[1.692s] Invoked command in '/home/login/ws_moveit/build/my_robot_control' returned '0': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build --no-deps symlink_data

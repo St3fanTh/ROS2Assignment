@@ -1,0 +1,40 @@
+[1.016s] Invoking command in '/home/login/ws_moveit/build/my_robot_control': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build
+[1.377s] running develop
+[1.605s] Removing /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my-robot-control.egg-link (link to .)
+[1.698s] Invoked command in '/home/login/ws_moveit/build/my_robot_control' returned '0': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/login/ws_moveit/build/my_robot_control/build
+[1.700s] Invoking command in '/home/login/ws_moveit/src/my_robot_control': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_control build --build-base /home/login/ws_moveit/build/my_robot_control/build install --record /home/login/ws_moveit/build/my_robot_control/install.log --single-version-externally-managed install_data --force
+[2.123s] running egg_info
+[2.147s] writing ../../build/my_robot_control/my_robot_control.egg-info/PKG-INFO
+[2.147s] writing dependency_links to ../../build/my_robot_control/my_robot_control.egg-info/dependency_links.txt
+[2.148s] writing entry points to ../../build/my_robot_control/my_robot_control.egg-info/entry_points.txt
+[2.148s] writing requirements to ../../build/my_robot_control/my_robot_control.egg-info/requires.txt
+[2.148s] writing top-level names to ../../build/my_robot_control/my_robot_control.egg-info/top_level.txt
+[2.186s] reading manifest file '../../build/my_robot_control/my_robot_control.egg-info/SOURCES.txt'
+[2.187s] writing manifest file '../../build/my_robot_control/my_robot_control.egg-info/SOURCES.txt'
+[2.187s] running build
+[2.187s] running build_py
+[2.187s] creating /home/login/ws_moveit/build/my_robot_control/build
+[2.187s] creating /home/login/ws_moveit/build/my_robot_control/build/lib
+[2.188s] creating /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control
+[2.188s] copying my_robot_control/__init__.py -> /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control
+[2.188s] copying my_robot_control/home_commander.py -> /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control
+[2.188s] copying my_robot_control/cartesian_commander.py -> /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control
+[2.188s] running install
+[2.194s] running install_lib
+[2.213s] creating /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control
+[2.214s] copying /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control/__init__.py -> /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control
+[2.214s] copying /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control/home_commander.py -> /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control
+[2.215s] copying /home/login/ws_moveit/build/my_robot_control/build/lib/my_robot_control/cartesian_commander.py -> /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control
+[2.216s] byte-compiling /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control/__init__.py to __init__.cpython-312.pyc
+[2.217s] byte-compiling /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control/home_commander.py to home_commander.cpython-312.pyc
+[2.220s] byte-compiling /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control/cartesian_commander.py to cartesian_commander.cpython-312.pyc
+[2.222s] running install_data
+[2.223s] copying resource/my_robot_control -> /home/login/ws_moveit/install/my_robot_control/share/ament_index/resource_index/packages
+[2.223s] copying package.xml -> /home/login/ws_moveit/install/my_robot_control/share/my_robot_control
+[2.223s] running install_egg_info
+[2.247s] Copying ../../build/my_robot_control/my_robot_control.egg-info to /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control-0.0.0-py3.12.egg-info
+[2.249s] running install_scripts
+[2.383s] Installing cartesian_commander script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[2.384s] Installing home_commander script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[2.384s] writing list of installed files to '/home/login/ws_moveit/build/my_robot_control/install.log'
+[2.445s] Invoked command in '/home/login/ws_moveit/src/my_robot_control' returned '0': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_control build --build-base /home/login/ws_moveit/build/my_robot_control/build install --record /home/login/ws_moveit/build/my_robot_control/install.log --single-version-externally-managed install_data --force

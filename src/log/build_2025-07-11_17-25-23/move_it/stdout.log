@@ -1,0 +1,20 @@
+running egg_info
+writing ../build/move_it/move_it.egg-info/PKG-INFO
+writing dependency_links to ../build/move_it/move_it.egg-info/dependency_links.txt
+writing entry points to ../build/move_it/move_it.egg-info/entry_points.txt
+writing requirements to ../build/move_it/move_it.egg-info/requires.txt
+writing top-level names to ../build/move_it/move_it.egg-info/top_level.txt
+reading manifest file '../build/move_it/move_it.egg-info/SOURCES.txt'
+writing manifest file '../build/move_it/move_it.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/move_it.launch.py -> /home/login/ws_moveit/src/install/move_it/share/move_it/launch
+running install_egg_info
+removing '/home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/move_it/move_it.egg-info to /home/login/ws_moveit/src/install/move_it/lib/python3.12/site-packages/move_it-0.0.0-py3.12.egg-info
+running install_scripts
+Installing cartesian_mover script to /home/login/ws_moveit/src/install/move_it/lib/move_it
+writing list of installed files to '/home/login/ws_moveit/src/build/move_it/install.log'
