@@ -1,0 +1,520 @@
+[0.000000] (-) TimerEvent: {}
+[0.000539] (moveit_task_constructor_demo) JobQueued: {'identifier': 'moveit_task_constructor_demo', 'dependencies': OrderedDict()}
+[0.000594] (moveit_task_constructor_demo) JobStarted: {'identifier': 'moveit_task_constructor_demo'}
+[0.010059] (moveit_task_constructor_demo) JobProgress: {'identifier': 'moveit_task_constructor_demo', 'progress': 'cmake'}
+[0.011832] (moveit_task_constructor_demo) Command: {'cmd': ['/usr/bin/cmake', '/home/login/ws_moveit/src/moveit_task_constructor/demo', '-DCMAKE_INSTALL_PREFIX=/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo'], 'cwd': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'login', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/login', 'OLDPWD': '/home/login/ws_moveit/src/moveit_task_constructor', 'TERM_PROGRAM_VERSION': '1.102.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4bc04310-f0bf-48e4-9137-e14161a7be2d.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/login/ws_moveit/install:/home/login/ros2_ws/install:/home/login/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'login', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/506_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/TDM-GCC-64/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/include:/mnt/c/texlive/2022/bin/win32:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/TortoiseGit/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.2.0/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/WireGuard/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Users/StefanPC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.2.3/bin:/mnt/c/Users/StefanPC/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm 2024.2.4/bin:/mnt/c/Users/StefanPC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/snap/bin:/home/login/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-413d97dc70.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_test_pkg:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_test_pkg:/home/login/install/my_robot_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'CMAKE_MODULE_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.099787] (-) TimerEvent: {}
+[0.200179] (-) TimerEvent: {}
+[0.217433] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.300317] (-) TimerEvent: {}
+[0.401028] (-) TimerEvent: {}
+[0.501456] (-) TimerEvent: {}
+[0.602156] (-) TimerEvent: {}
+[0.702515] (-) TimerEvent: {}
+[0.803199] (-) TimerEvent: {}
+[0.903775] (-) TimerEvent: {}
+[1.004129] (-) TimerEvent: {}
+[1.104462] (-) TimerEvent: {}
+[1.199020] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.204573] (-) TimerEvent: {}
+[1.304871] (-) TimerEvent: {}
+[1.405375] (-) TimerEvent: {}
+[1.506055] (-) TimerEvent: {}
+[1.606439] (-) TimerEvent: {}
+[1.707261] (-) TimerEvent: {}
+[1.808116] (-) TimerEvent: {}
+[1.908917] (-) TimerEvent: {}
+[2.009393] (-) TimerEvent: {}
+[2.066796] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.109521] (-) TimerEvent: {}
+[2.210232] (-) TimerEvent: {}
+[2.310989] (-) TimerEvent: {}
+[2.409991] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.411094] (-) TimerEvent: {}
+[2.419214] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.419520] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.419961] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.511615] (-) TimerEvent: {}
+[2.556601] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.611753] (-) TimerEvent: {}
+[2.712120] (-) TimerEvent: {}
+[2.812475] (-) TimerEvent: {}
+[2.912810] (-) TimerEvent: {}
+[2.913116] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.922791] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.923028] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.923490] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.931916] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[3.013077] (-) TimerEvent: {}
+[3.093450] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.113201] (-) TimerEvent: {}
+[3.213569] (-) TimerEvent: {}
+[3.237018] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found generate_parameter_library: 0.5.0 (/opt/ros/jazzy/share/generate_parameter_library/cmake)\n'}
+[3.248096] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)\n'}
+[3.313799] (-) TimerEvent: {}
+[3.414320] (-) TimerEvent: {}
+[3.490916] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[3.512547] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[3.514386] (-) TimerEvent: {}
+[3.537195] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.564308] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.614502] (-) TimerEvent: {}
+[3.671020] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[3.677681] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.714577] (-) TimerEvent: {}
+[3.774228] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[3.814659] (-) TimerEvent: {}
+[3.914946] (-) TimerEvent: {}
+[4.015229] (-) TimerEvent: {}
+[4.037170] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[4.115289] (-) TimerEvent: {}
+[4.179559] (moveit_task_constructor_demo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.215347] (-) TimerEvent: {}
+[4.315623] (-) TimerEvent: {}
+[4.415880] (-) TimerEvent: {}
+[4.477383] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 28.1.10 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)\n'}
+[4.515981] (-) TimerEvent: {}
+[4.518898] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found moveit_common: 2.12.3 (/opt/ros/jazzy/share/moveit_common/cmake)\n'}
+[4.589892] (moveit_task_constructor_demo) StderrLine: {'line': b"\x1b[0mmoveit_task_constructor_demo: You did not request a specific build type: Choosing 'Release' for maximum performance\x1b[0m\n"}
+[4.595383] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found moveit_core: 2.12.3 (/opt/ros/jazzy/share/moveit_core/cmake)\n'}
+[4.616059] (-) TimerEvent: {}
+[4.716327] (-) TimerEvent: {}
+[4.816600] (-) TimerEvent: {}
+[4.874662] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[4.916661] (-) TimerEvent: {}
+[5.016949] (-) TimerEvent: {}
+[5.117225] (-) TimerEvent: {}
+[5.217532] (-) TimerEvent: {}
+[5.317800] (-) TimerEvent: {}
+[5.418133] (-) TimerEvent: {}
+[5.518382] (-) TimerEvent: {}
+[5.618724] (-) TimerEvent: {}
+[5.719007] (-) TimerEvent: {}
+[5.819299] (-) TimerEvent: {}
+[5.919590] (-) TimerEvent: {}
+[6.019869] (-) TimerEvent: {}
+[6.120134] (-) TimerEvent: {}
+[6.220416] (-) TimerEvent: {}
+[6.320678] (-) TimerEvent: {}
+[6.420966] (-) TimerEvent: {}
+[6.521240] (-) TimerEvent: {}
+[6.621515] (-) TimerEvent: {}
+[6.721789] (-) TimerEvent: {}
+[6.822084] (-) TimerEvent: {}
+[6.884543] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem \n'}
+[6.922185] (-) TimerEvent: {}
+[7.022456] (-) TimerEvent: {}
+[7.117840] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[7.118039] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[7.122536] (-) TimerEvent: {}
+[7.222795] (-) TimerEvent: {}
+[7.323030] (-) TimerEvent: {}
+[7.423299] (-) TimerEvent: {}
+[7.523592] (-) TimerEvent: {}
+[7.536919] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found moveit_ros_planning: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)\n'}
+[7.541660] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono \n'}
+[7.589497] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)\n'}
+[7.593660] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread \n'}
+[7.612897] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options \n'}
+[7.623668] (-) TimerEvent: {}
+[7.645964] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread \n'}
+[7.689547] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Found moveit_task_constructor_core: 0.1.3 (/home/login/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)\n'}
+[7.723774] (-) TimerEvent: {}
+[7.814041] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Configuring done (7.8s)\n'}
+[7.823849] (-) TimerEvent: {}
+[7.924122] (-) TimerEvent: {}
+[7.943074] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[7.968813] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Build files have been written to: /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo\n'}
+[7.980841] (moveit_task_constructor_demo) CommandEnded: {'returncode': 0}
+[7.981441] (moveit_task_constructor_demo) JobProgress: {'identifier': 'moveit_task_constructor_demo', 'progress': 'build'}
+[7.982194] (moveit_task_constructor_demo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', '--', '-j12', '-l12'], 'cwd': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'login', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/login', 'OLDPWD': '/home/login/ws_moveit/src/moveit_task_constructor', 'TERM_PROGRAM_VERSION': '1.102.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4bc04310-f0bf-48e4-9137-e14161a7be2d.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/login/ws_moveit/install:/home/login/ros2_ws/install:/home/login/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'login', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/506_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/TDM-GCC-64/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/include:/mnt/c/texlive/2022/bin/win32:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/TortoiseGit/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.2.0/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/WireGuard/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Users/StefanPC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.2.3/bin:/mnt/c/Users/StefanPC/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm 2024.2.4/bin:/mnt/c/Users/StefanPC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/snap/bin:/home/login/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-413d97dc70.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_test_pkg:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_test_pkg:/home/login/install/my_robot_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'CMAKE_MODULE_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[8.024287] (-) TimerEvent: {}
+[8.036264] (moveit_task_constructor_demo) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mRunning `/opt/ros/jazzy/bin/generate_parameter_library_cpp /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo/include/moveit_task_constructor_demo/ik_clearance_cost_parameters.hpp /home/login/ws_moveit/src/moveit_task_constructor/demo/src/ik_clearance_cost_parameters.yaml `\x1b[0m\n'}
+[8.036564] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mRunning `/opt/ros/jazzy/bin/generate_parameter_library_cpp /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo/include/moveit_task_constructor_demo/pick_place_demo_parameters.hpp /home/login/ws_moveit/src/moveit_task_constructor/demo/src/pick_place_demo_parameters.yaml `\x1b[0m\n'}
+[8.036855] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_cartesian.dir/src/cartesian.cpp.o\x1b[0m\n'}
+[8.037116] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_modular.dir/src/modular.cpp.o\x1b[0m\n'}
+[8.037205] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_alternative_path_costs.dir/src/alternative_path_costs.cpp.o\x1b[0m\n'}
+[8.037614] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_fallbacks_move_to.dir/src/fallbacks_move_to.cpp.o\x1b[0m\n'}
+[8.124425] (-) TimerEvent: {}
+[8.224756] (-) TimerEvent: {}
+[8.325076] (-) TimerEvent: {}
+[8.425438] (-) TimerEvent: {}
+[8.525804] (-) TimerEvent: {}
+[8.626119] (-) TimerEvent: {}
+[8.668539] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 38%] \x1b[34m\x1b[1mCreating deprecated header file /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo/include/ik_clearance_cost_parameters.hpp\x1b[0m\n'}
+[8.691168] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 38%] Built target ik_clearance_cost_parameters\n'}
+[8.719327] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_ik_clearance_cost.dir/src/ik_clearance_cost.cpp.o\x1b[0m\n'}
+[8.726303] (-) TimerEvent: {}
+[8.826671] (-) TimerEvent: {}
+[8.927045] (-) TimerEvent: {}
+[9.027411] (-) TimerEvent: {}
+[9.127790] (-) TimerEvent: {}
+[9.171392] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mCreating deprecated header file /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo/include/pick_place_demo_parameters.hpp\x1b[0m\n'}
+[9.198149] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 50%] Built target pick_place_demo_parameters\n'}
+[9.227940] (-) TimerEvent: {}
+[9.228974] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_pick_place_task.dir/src/pick_place_task.cpp.o\x1b[0m\n'}
+[9.328082] (-) TimerEvent: {}
+[9.428464] (-) TimerEvent: {}
+[9.528814] (-) TimerEvent: {}
+[9.629143] (-) TimerEvent: {}
+[9.729489] (-) TimerEvent: {}
+[9.829845] (-) TimerEvent: {}
+[9.930252] (-) TimerEvent: {}
+[10.030636] (-) TimerEvent: {}
+[10.131080] (-) TimerEvent: {}
+[10.231607] (-) TimerEvent: {}
+[10.332039] (-) TimerEvent: {}
+[10.432508] (-) TimerEvent: {}
+[10.533008] (-) TimerEvent: {}
+[10.633481] (-) TimerEvent: {}
+[10.733918] (-) TimerEvent: {}
+[10.834304] (-) TimerEvent: {}
+[10.934754] (-) TimerEvent: {}
+[11.035152] (-) TimerEvent: {}
+[11.135567] (-) TimerEvent: {}
+[11.236016] (-) TimerEvent: {}
+[11.336416] (-) TimerEvent: {}
+[11.436837] (-) TimerEvent: {}
+[11.537235] (-) TimerEvent: {}
+[11.637582] (-) TimerEvent: {}
+[11.737954] (-) TimerEvent: {}
+[11.838365] (-) TimerEvent: {}
+[11.938784] (-) TimerEvent: {}
+[12.039226] (-) TimerEvent: {}
+[12.139635] (-) TimerEvent: {}
+[12.240041] (-) TimerEvent: {}
+[12.340429] (-) TimerEvent: {}
+[12.440876] (-) TimerEvent: {}
+[12.541282] (-) TimerEvent: {}
+[12.641702] (-) TimerEvent: {}
+[12.742125] (-) TimerEvent: {}
+[12.842472] (-) TimerEvent: {}
+[12.942841] (-) TimerEvent: {}
+[13.047348] (-) TimerEvent: {}
+[13.156165] (-) TimerEvent: {}
+[13.258025] (-) TimerEvent: {}
+[13.361096] (-) TimerEvent: {}
+[13.465643] (-) TimerEvent: {}
+[13.570018] (-) TimerEvent: {}
+[13.670629] (-) TimerEvent: {}
+[13.773304] (-) TimerEvent: {}
+[13.873782] (-) TimerEvent: {}
+[13.974532] (-) TimerEvent: {}
+[14.075523] (-) TimerEvent: {}
+[14.176461] (-) TimerEvent: {}
+[14.277444] (-) TimerEvent: {}
+[14.379221] (-) TimerEvent: {}
+[14.481327] (-) TimerEvent: {}
+[14.583632] (-) TimerEvent: {}
+[14.685997] (-) TimerEvent: {}
+[14.788255] (-) TimerEvent: {}
+[14.888753] (-) TimerEvent: {}
+[14.990856] (-) TimerEvent: {}
+[15.091588] (-) TimerEvent: {}
+[15.193194] (-) TimerEvent: {}
+[15.294919] (-) TimerEvent: {}
+[15.399435] (-) TimerEvent: {}
+[15.502469] (-) TimerEvent: {}
+[15.606917] (-) TimerEvent: {}
+[15.712557] (-) TimerEvent: {}
+[15.819480] (-) TimerEvent: {}
+[15.920141] (-) TimerEvent: {}
+[16.020828] (-) TimerEvent: {}
+[16.121448] (-) TimerEvent: {}
+[16.222249] (-) TimerEvent: {}
+[16.323018] (-) TimerEvent: {}
+[16.423818] (-) TimerEvent: {}
+[16.525064] (-) TimerEvent: {}
+[16.628102] (-) TimerEvent: {}
+[16.731009] (-) TimerEvent: {}
+[16.831758] (-) TimerEvent: {}
+[16.934008] (-) TimerEvent: {}
+[17.034824] (-) TimerEvent: {}
+[17.135890] (-) TimerEvent: {}
+[17.236905] (-) TimerEvent: {}
+[17.337631] (-) TimerEvent: {}
+[17.438696] (-) TimerEvent: {}
+[17.539160] (-) TimerEvent: {}
+[17.639864] (-) TimerEvent: {}
+[17.740931] (-) TimerEvent: {}
+[17.843187] (-) TimerEvent: {}
+[17.945524] (-) TimerEvent: {}
+[18.047901] (-) TimerEvent: {}
+[18.149041] (-) TimerEvent: {}
+[18.251403] (-) TimerEvent: {}
+[18.352080] (-) TimerEvent: {}
+[18.452523] (-) TimerEvent: {}
+[18.553347] (-) TimerEvent: {}
+[18.654091] (-) TimerEvent: {}
+[18.754583] (-) TimerEvent: {}
+[18.856801] (-) TimerEvent: {}
+[18.959090] (-) TimerEvent: {}
+[19.061341] (-) TimerEvent: {}
+[19.162604] (-) TimerEvent: {}
+[19.263529] (-) TimerEvent: {}
+[19.312494] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX executable modular\x1b[0m\n'}
+[19.363980] (-) TimerEvent: {}
+[19.464681] (-) TimerEvent: {}
+[19.547120] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable cartesian\x1b[0m\n'}
+[19.565323] (-) TimerEvent: {}
+[19.666251] (-) TimerEvent: {}
+[19.767473] (-) TimerEvent: {}
+[19.869890] (-) TimerEvent: {}
+[19.970743] (-) TimerEvent: {}
+[20.044076] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 66%] Built target moveit_task_constructor_demo_modular\n'}
+[20.071088] (-) TimerEvent: {}
+[20.171740] (-) TimerEvent: {}
+[20.228517] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 66%] Built target moveit_task_constructor_demo_cartesian\n'}
+[20.272171] (-) TimerEvent: {}
+[20.374580] (-) TimerEvent: {}
+[20.475539] (-) TimerEvent: {}
+[20.576171] (-) TimerEvent: {}
+[20.677063] (-) TimerEvent: {}
+[20.778145] (-) TimerEvent: {}
+[20.878538] (-) TimerEvent: {}
+[20.979109] (-) TimerEvent: {}
+[21.077852] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX executable ik_clearance_cost\x1b[0m\n'}
+[21.079251] (-) TimerEvent: {}
+[21.179676] (-) TimerEvent: {}
+[21.280185] (-) TimerEvent: {}
+[21.384079] (-) TimerEvent: {}
+[21.487414] (-) TimerEvent: {}
+[21.568441] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable alternative_path_costs\x1b[0m\n'}
+[21.588210] (-) TimerEvent: {}
+[21.648394] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 77%] Built target moveit_task_constructor_demo_ik_clearance_cost\n'}
+[21.688678] (-) TimerEvent: {}
+[21.789066] (-) TimerEvent: {}
+[21.896138] (-) TimerEvent: {}
+[22.000357] (-) TimerEvent: {}
+[22.100877] (-) TimerEvent: {}
+[22.108985] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 77%] Built target moveit_task_constructor_demo_alternative_path_costs\n'}
+[22.175479] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable fallbacks_move_to\x1b[0m\n'}
+[22.201104] (-) TimerEvent: {}
+[22.301715] (-) TimerEvent: {}
+[22.402186] (-) TimerEvent: {}
+[22.502901] (-) TimerEvent: {}
+[22.603605] (-) TimerEvent: {}
+[22.702432] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 83%] Built target moveit_task_constructor_demo_fallbacks_move_to\n'}
+[22.703776] (-) TimerEvent: {}
+[22.804395] (-) TimerEvent: {}
+[22.905288] (-) TimerEvent: {}
+[23.006461] (-) TimerEvent: {}
+[23.115169] (-) TimerEvent: {}
+[23.223859] (-) TimerEvent: {}
+[23.325527] (-) TimerEvent: {}
+[23.426336] (-) TimerEvent: {}
+[23.527388] (-) TimerEvent: {}
+[23.627803] (-) TimerEvent: {}
+[23.728395] (-) TimerEvent: {}
+[23.829131] (-) TimerEvent: {}
+[23.930098] (-) TimerEvent: {}
+[24.031134] (-) TimerEvent: {}
+[24.133703] (-) TimerEvent: {}
+[24.236229] (-) TimerEvent: {}
+[24.338837] (-) TimerEvent: {}
+[24.441473] (-) TimerEvent: {}
+[24.544097] (-) TimerEvent: {}
+[24.644955] (-) TimerEvent: {}
+[24.747560] (-) TimerEvent: {}
+[24.850233] (-) TimerEvent: {}
+[24.952992] (-) TimerEvent: {}
+[25.015388] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX shared library libmoveit_task_constructor_demo_pick_place_task.so\x1b[0m\n'}
+[25.053500] (-) TimerEvent: {}
+[25.159300] (-) TimerEvent: {}
+[25.260379] (-) TimerEvent: {}
+[25.341295] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 88%] Built target moveit_task_constructor_demo_pick_place_task\n'}
+[25.360714] (-) TimerEvent: {}
+[25.364828] (moveit_task_constructor_demo) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding CXX object CMakeFiles/moveit_task_constructor_demo_pick_place_demo.dir/src/pick_place_demo.cpp.o\x1b[0m\n'}
+[25.460952] (-) TimerEvent: {}
+[25.562109] (-) TimerEvent: {}
+[25.670846] (-) TimerEvent: {}
+[25.771428] (-) TimerEvent: {}
+[25.872028] (-) TimerEvent: {}
+[25.972681] (-) TimerEvent: {}
+[26.073390] (-) TimerEvent: {}
+[26.174093] (-) TimerEvent: {}
+[26.274867] (-) TimerEvent: {}
+[26.375778] (-) TimerEvent: {}
+[26.476698] (-) TimerEvent: {}
+[26.577737] (-) TimerEvent: {}
+[26.678735] (-) TimerEvent: {}
+[26.779141] (-) TimerEvent: {}
+[26.879519] (-) TimerEvent: {}
+[26.981611] (-) TimerEvent: {}
+[27.082249] (-) TimerEvent: {}
+[27.184322] (-) TimerEvent: {}
+[27.286245] (-) TimerEvent: {}
+[27.389483] (-) TimerEvent: {}
+[27.492719] (-) TimerEvent: {}
+[27.596005] (-) TimerEvent: {}
+[27.697926] (-) TimerEvent: {}
+[27.799114] (-) TimerEvent: {}
+[27.902197] (-) TimerEvent: {}
+[28.004168] (-) TimerEvent: {}
+[28.104991] (-) TimerEvent: {}
+[28.206794] (-) TimerEvent: {}
+[28.307910] (-) TimerEvent: {}
+[28.409112] (-) TimerEvent: {}
+[28.509565] (-) TimerEvent: {}
+[28.612701] (-) TimerEvent: {}
+[28.715945] (-) TimerEvent: {}
+[28.817006] (-) TimerEvent: {}
+[28.918943] (-) TimerEvent: {}
+[29.021907] (-) TimerEvent: {}
+[29.125151] (-) TimerEvent: {}
+[29.234085] (-) TimerEvent: {}
+[29.334902] (-) TimerEvent: {}
+[29.436791] (-) TimerEvent: {}
+[29.538682] (-) TimerEvent: {}
+[29.639680] (-) TimerEvent: {}
+[29.748608] (-) TimerEvent: {}
+[29.857517] (-) TimerEvent: {}
+[29.960251] (-) TimerEvent: {}
+[30.062569] (-) TimerEvent: {}
+[30.165331] (-) TimerEvent: {}
+[30.268426] (-) TimerEvent: {}
+[30.371427] (-) TimerEvent: {}
+[30.473302] (-) TimerEvent: {}
+[30.576448] (-) TimerEvent: {}
+[30.679420] (-) TimerEvent: {}
+[30.781484] (-) TimerEvent: {}
+[30.882161] (-) TimerEvent: {}
+[30.984584] (-) TimerEvent: {}
+[31.085506] (-) TimerEvent: {}
+[31.188654] (-) TimerEvent: {}
+[31.290655] (-) TimerEvent: {}
+[31.393873] (-) TimerEvent: {}
+[31.496932] (-) TimerEvent: {}
+[31.600089] (-) TimerEvent: {}
+[31.703119] (-) TimerEvent: {}
+[31.805973] (-) TimerEvent: {}
+[31.909184] (-) TimerEvent: {}
+[32.011079] (-) TimerEvent: {}
+[32.111677] (-) TimerEvent: {}
+[32.212380] (-) TimerEvent: {}
+[32.313100] (-) TimerEvent: {}
+[32.416048] (-) TimerEvent: {}
+[32.518349] (-) TimerEvent: {}
+[32.620797] (-) TimerEvent: {}
+[32.722564] (-) TimerEvent: {}
+[32.825134] (-) TimerEvent: {}
+[32.926069] (-) TimerEvent: {}
+[33.027096] (-) TimerEvent: {}
+[33.131545] (-) TimerEvent: {}
+[33.238268] (-) TimerEvent: {}
+[33.345094] (-) TimerEvent: {}
+[33.452062] (-) TimerEvent: {}
+[33.558885] (-) TimerEvent: {}
+[33.665715] (-) TimerEvent: {}
+[33.772519] (-) TimerEvent: {}
+[33.879496] (-) TimerEvent: {}
+[33.986472] (-) TimerEvent: {}
+[34.093454] (-) TimerEvent: {}
+[34.197401] (-) TimerEvent: {}
+[34.304108] (-) TimerEvent: {}
+[34.410789] (-) TimerEvent: {}
+[34.517783] (-) TimerEvent: {}
+[34.624768] (-) TimerEvent: {}
+[34.731619] (-) TimerEvent: {}
+[34.838657] (-) TimerEvent: {}
+[34.945668] (-) TimerEvent: {}
+[35.046648] (-) TimerEvent: {}
+[35.147701] (-) TimerEvent: {}
+[35.252162] (-) TimerEvent: {}
+[35.353231] (-) TimerEvent: {}
+[35.456192] (-) TimerEvent: {}
+[35.560411] (-) TimerEvent: {}
+[35.664772] (-) TimerEvent: {}
+[35.769160] (-) TimerEvent: {}
+[35.873494] (-) TimerEvent: {}
+[35.977965] (-) TimerEvent: {}
+[36.078674] (-) TimerEvent: {}
+[36.183119] (-) TimerEvent: {}
+[36.287587] (-) TimerEvent: {}
+[36.391530] (-) TimerEvent: {}
+[36.496028] (-) TimerEvent: {}
+[36.600560] (-) TimerEvent: {}
+[36.705104] (-) TimerEvent: {}
+[36.809555] (-) TimerEvent: {}
+[36.914065] (-) TimerEvent: {}
+[37.016017] (-) TimerEvent: {}
+[37.116562] (-) TimerEvent: {}
+[37.216964] (-) TimerEvent: {}
+[37.317433] (-) TimerEvent: {}
+[37.417899] (-) TimerEvent: {}
+[37.518637] (-) TimerEvent: {}
+[37.619400] (-) TimerEvent: {}
+[37.720017] (-) TimerEvent: {}
+[37.820682] (-) TimerEvent: {}
+[37.921342] (-) TimerEvent: {}
+[38.021964] (-) TimerEvent: {}
+[38.122656] (-) TimerEvent: {}
+[38.181487] (moveit_task_constructor_demo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pick_place_demo\x1b[0m\n'}
+[38.223191] (-) TimerEvent: {}
+[38.323840] (-) TimerEvent: {}
+[38.424248] (-) TimerEvent: {}
+[38.525112] (-) TimerEvent: {}
+[38.625951] (-) TimerEvent: {}
+[38.639648] (moveit_task_constructor_demo) StdoutLine: {'line': b'[100%] Built target moveit_task_constructor_demo_pick_place_demo\n'}
+[38.654851] (moveit_task_constructor_demo) CommandEnded: {'returncode': 0}
+[38.656401] (moveit_task_constructor_demo) JobProgress: {'identifier': 'moveit_task_constructor_demo', 'progress': 'install'}
+[38.667872] (moveit_task_constructor_demo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo'], 'cwd': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'login', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/login/ws_moveit/install/moveit_task_constructor_demo/lib:/home/login/ws_moveit/install/moveit_task_constructor_capabilities/lib:/home/login/ws_moveit/install/moveit_task_constructor_core/lib:/home/login/ws_moveit/install/rviz_marker_tools/lib:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/login', 'OLDPWD': '/home/login/ws_moveit/src/moveit_task_constructor', 'TERM_PROGRAM_VERSION': '1.102.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-4bc04310-f0bf-48e4-9137-e14161a7be2d.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/login/ws_moveit/install:/home/login/ros2_ws/install:/home/login/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'login', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/506_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/login/.vscode-server/bin/cb0c47c0cfaad0757385834bd89d410c78a856c0/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/libnvvp:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/libnvvp:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/TDM-GCC-64/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/include:/mnt/c/texlive/2022/bin/win32:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/TortoiseGit/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.2.0/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/WireGuard/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Users/StefanPC/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2021.2.3/bin:/mnt/c/Users/StefanPC/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm 2024.2.4/bin:/mnt/c/Users/StefanPC/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/snap/bin:/home/login/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-413d97dc70.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_test_pkg:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_test_pkg:/home/login/install/my_robot_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'CMAKE_MODULE_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/login/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/login/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/login/ros2_ws/build/my_test_pkg:/home/login/ros2_ws/install/my_test_pkg/lib/python3.12/site-packages:/home/login/install/my_test_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/login/ws_moveit/install/moveit_task_constructor_visualization:/home/login/ws_moveit/install/moveit_task_constructor_demo:/home/login/ws_moveit/install/moveit_task_constructor_capabilities:/home/login/ws_moveit/install/moveit2_tutorials:/home/login/ws_moveit/install/moveit_task_constructor_core:/home/login/ws_moveit/install/rviz_marker_tools:/home/login/ws_moveit/install/moveit_task_constructor_msgs:/home/login/ros2_ws/install/ur5_moveit_config:/home/login/ros2_ws/install/my_robot_description:/home/login/install/ur5_moveit_config:/home/login/install/my_robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[38.677796] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[38.678440] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/libmoveit_task_constructor_demo_pick_place_task.so\n'}
+[38.679205] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/libmoveit_task_constructor_demo_pick_place_task.so" to ""\n'}
+[38.679493] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/cartesian\n'}
+[38.679944] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/cartesian" to ""\n'}
+[38.680087] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/modular\n'}
+[38.680545] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/modular" to ""\n'}
+[38.680860] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/alternative_path_costs\n'}
+[38.681114] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/alternative_path_costs" to ""\n'}
+[38.681232] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo\n'}
+[38.681590] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/ik_clearance_cost_parameters.hpp\n'}
+[38.681768] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/pick_place_demo_parameters.hpp\n'}
+[38.682008] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/ik_clearance_cost\n'}
+[38.682548] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/ik_clearance_cost" to ""\n'}
+[38.682848] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fallbacks_move_to\n'}
+[38.683365] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fallbacks_move_to" to ""\n'}
+[38.683613] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo\n'}
+[38.683939] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/ik_clearance_cost_parameters.hpp\n'}
+[38.684336] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/pick_place_demo_parameters.hpp\n'}
+[38.684442] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/pick_place_demo\n'}
+[38.684659] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/pick_place_demo" to ""\n'}
+[38.684890] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/alternatives.py\n'}
+[38.685224] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/cartesian.py\n'}
+[38.685622] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/compute_ik.py\n'}
+[38.685709] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/constrained.py\n'}
+[38.685990] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/current_state.py\n'}
+[38.686184] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fallbacks.py\n'}
+[38.686389] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fix_collision_objects.py\n'}
+[38.686619] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fixed_state.py\n'}
+[38.686692] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/generate_pose.py\n'}
+[38.686757] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/merger.py\n'}
+[38.686819] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/modify_planning_scene.py\n'}
+[38.686883] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/multi_planner.py\n'}
+[38.686944] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/pickplace.py\n'}
+[38.687007] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/properties.py\n'}
+[38.687068] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch\n'}
+[38.687269] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch/run.launch.py\n'}
+[38.687448] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch/demo.launch.py\n'}
+[38.687833] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config\n'}
+[38.688281] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config/mtc.rviz\n'}
+[38.688456] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config/panda_config.yaml\n'}
+[38.688991] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/package_run_dependencies/moveit_task_constructor_demo\n'}
+[38.689368] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/parent_prefix_path/moveit_task_constructor_demo\n'}
+[38.689810] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/ament_prefix_path.sh\n'}
+[38.690162] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/ament_prefix_path.dsv\n'}
+[38.690296] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/path.sh\n'}
+[38.690629] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/path.dsv\n'}
+[38.691057] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.bash\n'}
+[38.691197] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.sh\n'}
+[38.691444] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.zsh\n'}
+[38.691815] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.dsv\n'}
+[38.691944] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/package.dsv\n'}
+[38.692040] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/packages/moveit_task_constructor_demo\n'}
+[38.692238] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/cmake/moveit_task_constructor_demoConfig.cmake\n'}
+[38.692397] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/cmake/moveit_task_constructor_demoConfig-version.cmake\n'}
+[38.692568] (moveit_task_constructor_demo) StdoutLine: {'line': b'-- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/package.xml\n'}
+[38.694985] (moveit_task_constructor_demo) CommandEnded: {'returncode': 0}
+[38.713360] (moveit_task_constructor_demo) JobEnded: {'identifier': 'moveit_task_constructor_demo', 'rc': 0}
+[38.714781] (-) EventReactorShutdown: {}

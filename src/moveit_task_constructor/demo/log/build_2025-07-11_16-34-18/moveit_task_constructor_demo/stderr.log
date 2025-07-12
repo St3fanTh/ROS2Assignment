@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:197 (file):
+  file INSTALL cannot find
+  "/home/login/ws_moveit/src/moveit_task_constructor/demo/scripts/reach_cli.py":
+  No such file or directory.
+
+[0m

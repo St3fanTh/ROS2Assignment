@@ -1,0 +1,63 @@
+[0.021s] Invoking command in '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/install/move_it:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo -- -j12 -l12
+[0.109s] [ 11%] Built target pick_place_demo_parameters
+[0.112s] [ 22%] Built target ik_clearance_cost_parameters
+[0.130s] [ 33%] Built target moveit_task_constructor_demo_cartesian
+[0.130s] [ 44%] Built target moveit_task_constructor_demo_modular
+[0.131s] [ 55%] Built target moveit_task_constructor_demo_alternative_path_costs
+[0.139s] [ 66%] Built target moveit_task_constructor_demo_fallbacks_move_to
+[0.166s] [ 77%] Built target moveit_task_constructor_demo_ik_clearance_cost
+[0.168s] [ 88%] Built target moveit_task_constructor_demo_pick_place_task
+[0.217s] [100%] Built target moveit_task_constructor_demo_pick_place_demo
+[0.240s] Invoked command in '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/install/move_it:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo -- -j12 -l12
+[0.255s] Invoking command in '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/install/move_it:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --install /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo
+[0.269s] -- Install configuration: "Release"
+[0.269s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/libmoveit_task_constructor_demo_pick_place_task.so
+[0.269s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/cartesian
+[0.270s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/modular
+[0.270s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/alternative_path_costs
+[0.270s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo
+[0.271s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/ik_clearance_cost_parameters.hpp
+[0.271s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/pick_place_demo_parameters.hpp
+[0.271s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/ik_clearance_cost
+[0.271s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fallbacks_move_to
+[0.272s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo
+[0.272s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/ik_clearance_cost_parameters.hpp
+[0.272s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/include/moveit_task_constructor_demo/pick_place_demo_parameters.hpp
+[0.272s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/pick_place_demo
+[0.273s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/alternatives.py
+[0.273s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/cartesian.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/compute_ik.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/constrained.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/current_state.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fallbacks.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fix_collision_objects.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/fixed_state.py
+[0.274s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/generate_pose.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/merger.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/modify_planning_scene.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/multi_planner.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/pickplace.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/properties.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/lib/moveit_task_constructor_demo/send_cartesian_goal.py
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch
+[0.275s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch/run.launch.py
+[0.276s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/launch/demo.launch.py
+[0.276s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config
+[0.276s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config/mtc.rviz
+[0.276s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/config/panda_config.yaml
+[0.277s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/package_run_dependencies/moveit_task_constructor_demo
+[0.277s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/parent_prefix_path/moveit_task_constructor_demo
+[0.277s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/ament_prefix_path.sh
+[0.277s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/ament_prefix_path.dsv
+[0.278s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/path.sh
+[0.278s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/environment/path.dsv
+[0.278s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.bash
+[0.279s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.sh
+[0.279s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.zsh
+[0.279s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/local_setup.dsv
+[0.279s] -- Installing: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/package.dsv
+[0.280s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/ament_index/resource_index/packages/moveit_task_constructor_demo
+[0.280s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/cmake/moveit_task_constructor_demoConfig.cmake
+[0.281s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/cmake/moveit_task_constructor_demoConfig-version.cmake
+[0.281s] -- Up-to-date: /home/login/ws_moveit/src/moveit_task_constructor/demo/install/moveit_task_constructor_demo/share/moveit_task_constructor_demo/package.xml
+[0.281s] Invoked command in '/home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/login/install/move_it:/home/login/ws_moveit/install/move_it:/home/login/ros2_ws/install/my_test_pkg:/home/login/install/my_test_pkg:/opt/ros/jazzy /usr/bin/cmake --install /home/login/ws_moveit/src/moveit_task_constructor/demo/build/moveit_task_constructor_demo
