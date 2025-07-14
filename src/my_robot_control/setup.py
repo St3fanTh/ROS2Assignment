@@ -20,9 +20,13 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'home_commander = my_robot_control.home_commander:main',
-            'cartesian_commander = my_robot_control.cartesian_commander:main',
+            'home_commander_panda = my_robot_control.home_commander_panda:main',
+            'cartesian_commander_panda = my_robot_control.cartesian_commander_panda:main',
             'trajectory_visualizer = my_robot_control.trajectory_visualizer:main',
+            'home_commander_ur5 = my_robot_control.home_commander_ur5:main',
+            'cartesian_commander_ur5 = my_robot_control.cartesian_commander_ur5:main',
+            'add_box_obstacle = my_robot_control.add_box_obstacle:main',
+            'movelt_planning_obstacle = my_robot_control.movelt_planning_obstacle:main',
         ],
     },
 )
