@@ -1,0 +1,27 @@
+[0.788s] Invoking command in '/home/login/ws_moveit/src/my_robot_control': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_control build --build-base /home/login/ws_moveit/build/my_robot_control/build install --record /home/login/ws_moveit/build/my_robot_control/install.log --single-version-externally-managed install_data
+[1.034s] running egg_info
+[1.052s] writing ../../build/my_robot_control/my_robot_control.egg-info/PKG-INFO
+[1.052s] writing dependency_links to ../../build/my_robot_control/my_robot_control.egg-info/dependency_links.txt
+[1.053s] writing entry points to ../../build/my_robot_control/my_robot_control.egg-info/entry_points.txt
+[1.053s] writing requirements to ../../build/my_robot_control/my_robot_control.egg-info/requires.txt
+[1.053s] writing top-level names to ../../build/my_robot_control/my_robot_control.egg-info/top_level.txt
+[1.086s] reading manifest file '../../build/my_robot_control/my_robot_control.egg-info/SOURCES.txt'
+[1.087s] writing manifest file '../../build/my_robot_control/my_robot_control.egg-info/SOURCES.txt'
+[1.087s] running build
+[1.087s] running build_py
+[1.088s] running install
+[1.093s] running install_lib
+[1.112s] running install_data
+[1.112s] running install_egg_info
+[1.130s] removing '/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control-0.0.0-py3.12.egg-info' (and everything under it)
+[1.130s] Copying ../../build/my_robot_control/my_robot_control.egg-info to /home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages/my_robot_control-0.0.0-py3.12.egg-info
+[1.131s] running install_scripts
+[1.255s] Installing add_box_obstacle script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.256s] Installing cartesian_commander_panda script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.256s] Installing cartesian_commander_ur5 script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.256s] Installing home_commander_panda script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.256s] Installing home_commander_ur5 script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.257s] Installing movelt_planning_obstacle script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.257s] Installing trajectory_visualizer script to /home/login/ws_moveit/install/my_robot_control/lib/my_robot_control
+[1.257s] writing list of installed files to '/home/login/ws_moveit/build/my_robot_control/install.log'
+[1.301s] Invoked command in '/home/login/ws_moveit/src/my_robot_control' returned '0': PYTHONPATH=/home/login/ws_moveit/build/my_robot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/login/ws_moveit/install/my_robot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_control build --build-base /home/login/ws_moveit/build/my_robot_control/build install --record /home/login/ws_moveit/build/my_robot_control/install.log --single-version-externally-managed install_data

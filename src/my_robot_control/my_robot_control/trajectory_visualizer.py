@@ -1,198 +1,274 @@
 #!/usr/bin/env python3
+import sys
+import math
 import rclpy
 from rclpy.node import Node
-from trajectory_msgs.msg import JointTrajectory
-from moveit_msgs.srv import GetPositionFK
-from visualization_msgs.msg import Marker, MarkerArray
-from geometry_msgs.msg import Point, PoseStamped, PointStamped
+from rclpy.action import ActionClient
+from rclpy.duration import Duration
+from geometry_msgs.msg import PoseStamped
+from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from control_msgs.action import FollowJointTrajectory
+from moveit_msgs.srv import GetPositionIK, GetPositionFK
 from sensor_msgs.msg import JointState
-from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import MultiThreadedExecutor
+from visualization_msgs.msg import Marker, MarkerArray
+from tf_transformations import quaternion_from_euler, euler_from_quaternion
 import time
+import os
 
-class TrajectoryVisualizer(Node):
-    def __init__(self):
-        super().__init__('trajectory_visualizer')
-        
-        # Service-Client für Forward Kinematics
-        self.fk_cb_group = ReentrantCallbackGroup()
-        self.fk_client = self.create_client(
-            GetPositionFK, 
-            '/compute_fk',
-            callback_group=self.fk_cb_group
-        )
-        self.get_logger().info("Warte auf FK-Service...")
-        while not self.fk_client.wait_for_service(timeout_sec=5.0):
-            self.get_logger().warn('FK-Service nicht verfügbar, erneut versuchen...')
-        
-        # Debug-Publisher für FK-Punkte
-        self.debug_pub = self.create_publisher(PointStamped, '/debug_fk_points', 10)
-        
-        # Publisher für Visualisierungs-Marker
-        self.marker_pub = self.create_publisher(MarkerArray, '/trajectory_markers', 10)
-        
-        # Subscriber für Trajektorien-Nachrichten
-        self.sub = self.create_subscription(
-            JointTrajectory,
-            '/arm_trajectory',
-            self.trajectory_callback,
-            10
-        )
-        self.get_logger().info("Trajectory Visualizer bereit...")
-        
-        # Testmarker senden
-        self.publish_test_marker()
 
-    def publish_test_marker(self):
-        """Sende einen Testmarker zur Überprüfung der RViz-Verbindung"""
-        marker_array = MarkerArray()
-        
-        # Testmarker (roter Würfel bei (0.5, 0, 0.5))
-        test_marker = Marker()
-        test_marker.header.frame_id = "world"
-        test_marker.header.stamp = self.get_clock().now().to_msg()
-        test_marker.ns = "test"
-        test_marker.id = 100
-        test_marker.type = Marker.CUBE
-        test_marker.action = Marker.ADD
-        test_marker.pose.position.x = 0.5
-        test_marker.pose.position.y = 0.0
-        test_marker.pose.position.z = 0.5
-        test_marker.pose.orientation.w = 1.0
-        test_marker.scale.x = 0.1
-        test_marker.scale.y = 0.1
-        test_marker.scale.z = 0.1
-        test_marker.color.a = 1.0
-        test_marker.color.r = 1.0
-        test_marker.color.g = 0.0
-        test_marker.color.b = 0.0
-        marker_array.markers.append(test_marker)
-        
-        self.marker_pub.publish(marker_array)
-        self.get_logger().info("Testmarker gesendet (roter Würfel bei (0.5, 0, 0.5))")
+def interpolate_pose(start, goal, steps):
+    """Lineare Interpolation zwischen zwei kartesischen Posen (6 DoF)"""
+    interpolated = []
+    for i in range(steps):
+        alpha = i / (steps - 1)
+        point = [(1 - alpha) * s + alpha * g for s, g in zip(start, goal)]
+        interpolated.append(point)
+    return interpolated
 
-    def trajectory_callback(self, msg):
-        self.get_logger().info(f"Neue Trajektorie mit {len(msg.points)} Punkten empfangen")
-        
-        if not msg.points:
-            self.get_logger().warn("Leere Trajektorie erhalten!")
-            return
-            
-        positions = []
-        self.get_logger().info(f"Starte FK-Berechnung für {len(msg.points)} Punkte...")
-        start_time = time.time()
-        
-        # FK für jeden Punkt der Trajektorie berechnen
-        for i, point in enumerate(msg.points):
-            # Bereite FK-Request vor
-            req = GetPositionFK.Request()
-            req.header.frame_id = "world"
-            req.header.stamp = self.get_clock().now().to_msg()
-            req.fk_link_names = ["panda_link8"]  # Endeffektor-Link
-            
-            # Setze Gelenkpositionen für diesen Punkt
-            joint_state = JointState()
-            joint_state.name = msg.joint_names
-            joint_state.position = point.positions
-            req.robot_state.joint_state = joint_state
 
-            # FK anfragen
+class CartesianInterpUR5(Node):
+    def __init__(self, pose_xyzrpy):
+        super().__init__("cartesian_commander_ur5_interp")
+        self.pose_xyzrpy = pose_xyzrpy
+        self.current_joint_state = None
+        self.execution_complete = False
+        self.error_occurred = False
+
+        # Initialisiere leeren JointState
+        self.current_joint_state = JointState()
+        self.current_joint_state.name = [
+            "shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint",
+            "wrist_1_joint", "wrist_2_joint", "wrist_3_joint"
+        ]
+        self.current_joint_state.position = [0.0] * 6
+
+        # Subscriber, Action und Service Clients
+        self.create_subscription(JointState, "/joint_states", self.joint_cb, 10)
+        self.act_client = ActionClient(
+            self, FollowJointTrajectory, "/ur5_arm_controller/follow_joint_trajectory")
+        self.ik_client = self.create_client(GetPositionIK, "/compute_ik")
+        self.fk_client = self.create_client(GetPositionFK, "/compute_fk")
+
+        # Marker-Publisher
+        self.marker_pub = self.create_publisher(MarkerArray, 'waypoint_markers', 10)
+
+    def joint_cb(self, msg):
+        try:
+            self.current_joint_state.header = msg.header
+            self.current_joint_state.name = msg.name
+            self.current_joint_state.position = list(msg.position)
+            self.current_joint_state.velocity = list(msg.velocity)
+            self.current_joint_state.effort = list(msg.effort)
+        except Exception as e:
+            self.get_logger().error(f"Fehler in JointState-Callback: {str(e)}")
+
+    def wait_for_services(self):
+        self.get_logger().info("Warte auf Services...")
+        if not self.act_client.wait_for_server(timeout_sec=5.0):
+            self.get_logger().error("Action-Server nicht verfügbar!")
+            return False
+        if not self.ik_client.wait_for_service(timeout_sec=5.0):
+            self.get_logger().error("IK-Service nicht verfügbar!")
+            return False
+        if not self.fk_client.wait_for_service(timeout_sec=5.0):
+            self.get_logger().error("FK-Service nicht verfügbar!")
+            return False
+        return True
+
+    def current_pose(self):
+        req = GetPositionFK.Request()
+        req.fk_link_names = ["tool0"]
+        req.robot_state.joint_state = self.current_joint_state
+        req.header.frame_id = "world"
+        req.header.stamp = self.get_clock().now().to_msg()
+        try:
             future = self.fk_client.call_async(req)
-            rclpy.spin_until_future_complete(self, future)
+            rclpy.spin_until_future_complete(self, future, timeout_sec=2.0)
+            if future.result() is None:
+                self.get_logger().error("FK-Anfrage timeout!")
+                return None
             res = future.result()
-            
-            if res is None:
-                self.get_logger().error(f"FK für Punkt {i} fehlgeschlagen: Keine Antwort")
-                continue
-                
-            if res.error_code.val != res.error_code.SUCCESS:
-                self.get_logger().error(f"FK-Fehler für Punkt {i}: Code {res.error_code.val}")
-                continue
-                
-            if not res.pose_stamped:
-                self.get_logger().error(f"Keine Pose in FK-Antwort für Punkt {i}")
-                continue
-                
-            position = res.pose_stamped[0].pose.position
-            positions.append(position)
-            
-            # Debug-Punkt veröffentlichen
-            debug_point = PointStamped()
-            debug_point.header.frame_id = "world"
-            debug_point.header.stamp = self.get_clock().now().to_msg()
-            debug_point.point = Point(x=position.x, y=position.y, z=position.z)
-            self.debug_pub.publish(debug_point)
-        
-        duration = time.time() - start_time
-        self.get_logger().info(f"FK-Berechnung abgeschlossen ({duration:.2f}s, {len(positions)} Punkte)")
-        
-        # Visualisiere die berechneten Positionen
-        self.publish_markers(positions)
+            if not res or not res.pose_stamped:
+                self.get_logger().error("FK-Anfrage fehlgeschlagen!")
+                return None
+            return res.pose_stamped[0]
+        except Exception as e:
+            self.get_logger().error(f"FK-Fehler: {str(e)}")
+            return None
 
-    def publish_markers(self, positions):
-        if not positions:
-            self.get_logger().warn("Keine Positionen zum Visualisieren!")
+    def request_ik(self, pose):
+        req = GetPositionIK.Request()
+        req.ik_request.group_name = "ur5_arm"
+        req.ik_request.pose_stamped = pose
+        req.ik_request.timeout = Duration(seconds=2).to_msg()
+        req.ik_request.avoid_collisions = True
+        req.ik_request.robot_state.joint_state = self.current_joint_state
+        req.ik_request.robot_state.is_diff = True
+        try:
+            future = self.ik_client.call_async(req)
+            rclpy.spin_until_future_complete(self, future, timeout_sec=2.0)
+            if future.result() is None:
+                self.get_logger().error("IK-Anfrage timeout!")
+                return None
+            res = future.result()
+            if not res or res.error_code.val != res.error_code.SUCCESS:
+                self.get_logger().error(f"IK-Fehler: Code {res.error_code.val}")
+                return None
+            joint_names = [
+                "shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint",
+                "wrist_1_joint", "wrist_2_joint", "wrist_3_joint"]
+            ik_dict = {name: pos for name, pos in zip(res.solution.joint_state.name, res.solution.joint_state.position)}
+            return [ik_dict.get(name, 0.0) for name in joint_names]
+        except Exception as e:
+            self.get_logger().error(f"IK-Fehler: {str(e)}")
+            return None
+
+    def execute(self):
+        if not self.wait_for_services():
+            self.error_occurred = True
             return
-            
+
+        # Warte auf erste JointState-Daten
+        start_time = time.time()
+        while time.time() - start_time < 3.0:
+            if any(p != 0.0 for p in self.current_joint_state.position):
+                break
+            self.get_logger().info("Warte auf JointState-Daten...", throttle_duration_sec=1.0)
+            rclpy.spin_once(self, timeout_sec=0.1)
+        else:
+            self.get_logger().error("Keine JointState-Daten empfangen!")
+            self.error_occurred = True
+            return
+
+        # Zielpose erstellen
+        goal_pose = self.pose_xyzrpy
+        goal_pose_msg = PoseStamped()
+        goal_pose_msg.header.frame_id = "world"
+        goal_pose_msg.header.stamp = self.get_clock().now().to_msg()
+        goal_pose_msg.pose.position.x = goal_pose[0]
+        goal_pose_msg.pose.position.y = goal_pose[1]
+        goal_pose_msg.pose.position.z = goal_pose[2]
+        q = quaternion_from_euler(goal_pose[3], goal_pose[4], goal_pose[5])
+        goal_pose_msg.pose.orientation.x, goal_pose_msg.pose.orientation.y, goal_pose_msg.pose.orientation.z, goal_pose_msg.pose.orientation.w = q
+
+        # Startpose via FK
+        start_pose_msg = self.current_pose()
+        if start_pose_msg is None:
+            self.error_occurred = True
+            return
+        start_xyzrpy = [
+            start_pose_msg.pose.position.x,
+            start_pose_msg.pose.position.y,
+            start_pose_msg.pose.position.z,
+            *euler_from_quaternion([
+                start_pose_msg.pose.orientation.x,
+                start_pose_msg.pose.orientation.y,
+                start_pose_msg.pose.orientation.z,
+                start_pose_msg.pose.orientation.w,
+            ])
+        ]
+
+        # Interpolation
+        waypoints = interpolate_pose(start_xyzrpy, goal_pose, steps=50)
+
+        # MarkerArray bauen
         marker_array = MarkerArray()
-        
-        # Lösche vorherige Marker
-        delete_marker = Marker()
-        delete_marker.action = Marker.DELETEALL
-        marker_array.markers.append(delete_marker)
-        
-        # Marker für Trajektorien-Punkte
-        points_marker = Marker()
-        points_marker.header.frame_id = "world"
-        points_marker.header.stamp = self.get_clock().now().to_msg()
-        points_marker.ns = "trajectory_points"
-        points_marker.id = 0
-        points_marker.type = Marker.SPHERE_LIST
-        points_marker.action = Marker.ADD
-        points_marker.scale.x = 0.02
-        points_marker.scale.y = 0.02
-        points_marker.scale.z = 0.02
-        points_marker.color.a = 1.0
-        points_marker.color.r = 0.0
-        points_marker.color.g = 1.0
-        points_marker.color.b = 0.0
-        points_marker.points = [Point(x=p.x, y=p.y, z=p.z) for p in positions]
-        marker_array.markers.append(points_marker)
-        
-        # Marker für Trajektorien-Linie
-        line_marker = Marker()
-        line_marker.header.frame_id = "world"
-        line_marker.header.stamp = self.get_clock().now().to_msg()
-        line_marker.ns = "trajectory_line"
-        line_marker.id = 1
-        line_marker.type = Marker.LINE_STRIP
-        line_marker.action = Marker.ADD
-        line_marker.scale.x = 0.005
-        line_marker.color.a = 1.0
-        line_marker.color.r = 1.0
-        line_marker.color.g = 0.0
-        line_marker.color.b = 0.0
-        line_marker.points = [Point(x=p.x, y=p.y, z=p.z) for p in positions]
-        marker_array.markers.append(line_marker)
-        
+        traj = JointTrajectory()
+        traj.joint_names = self.current_joint_state.name
+
+        for i, wp in enumerate(waypoints):
+            # Marker erzeugen
+            m = Marker()
+            m.header.frame_id = "world"
+            m.header.stamp = self.get_clock().now().to_msg()
+            m.ns = "waypoints"
+            m.id = i
+            m.type = Marker.SPHERE
+            m.action = Marker.ADD
+            m.pose.position.x, m.pose.position.y, m.pose.position.z = wp[0], wp[1], wp[2]
+            m.pose.orientation.w = 1.0
+            m.scale.x = m.scale.y = m.scale.z = 0.02
+            m.color.r = 1.0
+            m.color.a = 1.0
+            m.lifetime.sec = 0
+            marker_array.markers.append(m)
+
+            # IK anfordern
+            ps = PoseStamped()
+            ps.header.frame_id = "world"
+            ps.header.stamp = self.get_clock().now().to_msg()
+            ps.pose.position.x, ps.pose.position.y, ps.pose.position.z = wp[0], wp[1], wp[2]
+            q = quaternion_from_euler(wp[3], wp[4], wp[5])
+            ps.pose.orientation.x, ps.pose.orientation.y, ps.pose.orientation.z, ps.pose.orientation.w = q
+            joint_positions = self.request_ik(ps)
+            if joint_positions is None:
+                self.get_logger().error(f"IK-Fehler bei Wegpunkt {i}. Abbruch.")
+                self.error_occurred = True
+                return
+            pt = JointTrajectoryPoint()
+            pt.positions = joint_positions
+            pt.time_from_start = Duration(seconds=1.5 + i * 0.5).to_msg()
+            traj.points.append(pt)
+
+        # Publisher Marker
         self.marker_pub.publish(marker_array)
-        self.get_logger().info(f"{len(positions)} Punkte als Marker visualisiert")
+        self.get_logger().info("Waypoint-Marker publiziert.")
 
-def main():
+        # Action senden
+        goal = FollowJointTrajectory.Goal()
+        goal.trajectory = traj
+        self.get_logger().info("Sende Trajektorie an Controller...")
+        self.send_goal_future = self.act_client.send_goal_async(goal)
+        self.send_goal_future.add_done_callback(self.goal_response_callback)
+
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().error("Trajektorie abgelehnt!")
+            self.error_occurred = True
+            self.execution_complete = True
+            return
+        self.get_logger().info("Trajektorie akzeptiert, warte auf Ergebnis...")
+        self.result_future = goal_handle.get_result_async()
+        self.result_future.add_done_callback(self.get_result_callback)
+
+    def get_result_callback(self, future):
+        result = future.result().result
+        if result.error_code == FollowJointTrajectory.Result.SUCCESSFUL:
+            self.get_logger().info("Ausführung abgeschlossen")
+        else:
+            self.get_logger().error(f"Fehlercode: {result.error_code}")
+        self.execution_complete = True
+
+
+def main(argv=sys.argv[1:]):
+    if len(argv) != 6:
+        print("Aufruf: ros2 run my_robot_control movelt_planning_obstacle <x> <y> <z> <roll> <pitch> <yaw>")
+        return
+    pose_vals = [float(v) for v in argv]
+    os.environ["PYTHONUNBUFFERED"] = "1"
     rclpy.init()
-    visualizer = TrajectoryVisualizer()
-    
-    # Multi-Threaded Executor
-    executor = MultiThreadedExecutor(num_threads=4)
-    executor.add_node(visualizer)
-    
+    node = CartesianInterpUR5(pose_vals)
     try:
-        executor.spin()
+        node.execute()
+        start_time = time.time()
+        while (rclpy.ok() and not node.execution_complete and not node.error_occurred and time.time() - start_time < 120.0):
+            rclpy.spin_once(node, timeout_sec=0.1)
+        if not node.execution_complete and not node.error_occurred:
+            node.get_logger().warn("Timeout während der Ausführung")
     except KeyboardInterrupt:
-        pass
+        node.get_logger().info("Abgebrochen durch Benutzer")
+    except Exception as e:
+        node.get_logger().error(f"Kritischer Fehler: {str(e)}")
     finally:
-        visualizer.destroy_node()
-        rclpy.shutdown()
+        try:
+            node.destroy_node()
+            rclpy.try_shutdown()
+        except:
+            pass
+        time.sleep(0.5)
+    if node.error_occurred:
+        sys.exit(1)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
