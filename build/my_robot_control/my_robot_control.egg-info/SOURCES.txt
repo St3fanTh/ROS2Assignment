@@ -9,8 +9,13 @@ setup.py
 ../../build/my_robot_control/my_robot_control.egg-info/top_level.txt
 ../../build/my_robot_control/my_robot_control.egg-info/zip-safe
 my_robot_control/__init__.py
-my_robot_control/cartesian_commander.py
-my_robot_control/home_commander.py
+my_robot_control/add_box_obstacle.py
+my_robot_control/cartesian_commander_panda.py
+my_robot_control/cartesian_commander_ur5.py
+my_robot_control/home_commander_panda.py
+my_robot_control/home_commander_ur5.py
+my_robot_control/movelt_planning_obstacle.py
+my_robot_control/trajectory_visualizer.py
 resource/my_robot_control
 test/test_copyright.py
 test/test_flake8.py
