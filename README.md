@@ -15,13 +15,13 @@ This repository provides a ROS 2 package for controlling a UR5 robot arm with Mo
 
 1. Clone this repository into your ROS 2 workspace:
    ```bash
-   cd ~/ros2_ws/src
+   cd ~/ws_moveit/src
    git clone https://github.com/St3fanTh/ROS2Assignment.git my_robot_control_ur5
 ````
 
 2. Build the workspace:
    ```bash
-   cd ~/ros2_ws
+   cd ~/ws_moveit
    colcon build --packages-select my_robot_control_ur5
    ```
 3. Source the workspace:
@@ -52,7 +52,7 @@ This will:
 ## Nodes and Scripts
 
 - **demo.launch.py**: Launches the UR5 robot in simulation or on real hardware, brings up controllers, and MoveIt services.
-- **movelt\_planning\_obstacle**: Node that reads a target pose, interpolates a Cartesian path, requests IK/FK, publishes markers, and executes the trajectory.
+- **movelt\_planning\_obstacle.py**: Node that reads a target pose, interpolates a Cartesian path, requests IK/FK, publishes markers, and executes the trajectory.
 
 > **Note:** The following scripts were used for testing purposes and are **not** relevant to the main demo:
 >
@@ -66,18 +66,3 @@ This will:
 - Verify the controller `/ur5_arm_controller/follow_joint_trajectory` is active.
 - If no `/joint_states` are received, the node will default to a pre-defined home pose.
 
-## License
-
-This project is released under the MIT License.
-
-The MIT License is a permissive open-source license that allows you to freely use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. It requires that the original copyright and license notice be included in all copies or substantial portions of the software.
-
-**Key points of the MIT License:**
-
-- **Freedom**: You can use the software for any purpose.
-- **Permissive**: You can integrate the software into proprietary products.
-- **Notice requirement**: You must include the license text and copyright notice.
-- **No warranty**: The software is provided "as is", without warranty of any kind.
-
-```
-```
