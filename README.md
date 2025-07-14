@@ -22,7 +22,7 @@ This repository provides a ROS 2 package for controlling a UR5 robot arm with Mo
 2. Build the workspace:
    ```bash
    cd ~/ws_moveit
-   colcon build --packages-select my_robot_control_ur5
+   colcon build 
    ```
 3. Source the workspace:
    ```bash
