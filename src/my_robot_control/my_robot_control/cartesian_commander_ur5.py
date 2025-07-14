@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-cartesian_commander_ur5.py
 
-Bewegt den UR5-Arm zu einer kartesischen Zielpose (x y z roll pitch yaw):
+Moves the UR5 arm to a Cartesian target pose (x y z roll pitch yaw):
 
     ros2 run my_robot_control cartesian_commander_ur5 0.4 0.2 0.3 0 1.57 0
 
-• IK-Service:   /compute_ik   (MoveIt)
+• IK service:   /compute_ik   (MoveIt)
 • Controller:   /ur5_arm_controller/follow_joint_trajectory
-• Joint-Namen:  shoulder_pan, shoulder_lift, elbow, wrist_1, wrist_2, wrist_3
+• Joint names:  shoulder_pan_joint, shoulder_lift_joint, elbow_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint
 """
 
 import sys
@@ -27,12 +26,12 @@ from tf_transformations import quaternion_from_euler
 
 
 # ------------------------------------------------------------
-# IK anfragen
+# Helper: request inverse kinematics
 # ------------------------------------------------------------
 def request_ik(node: Node, pose: PoseStamped, group: str = "ur5_arm"):
-    cli = node.create_client(GetPositionIK, "/compute_ik")
-    if not cli.wait_for_service(timeout_sec=5.0):
-        node.get_logger().error("Service /compute_ik nicht verfügbar!")
+    client = node.create_client(GetPositionIK, "/compute_ik")
+    if not client.wait_for_service(timeout_sec=5.0):
+        node.get_logger().error("Service /compute_ik not available!")
         return None
 
     req = GetPositionIK.Request()
@@ -41,7 +40,7 @@ def request_ik(node: Node, pose: PoseStamped, group: str = "ur5_arm"):
     req.ik_request.timeout = Duration(seconds=5).to_msg()
     req.ik_request.avoid_collisions = True
 
-    # Seed-State (Nullpose)
+    # Seed state (home pose)
     js = JointState()
     js.name = [
         "shoulder_pan_joint",
@@ -54,29 +53,27 @@ def request_ik(node: Node, pose: PoseStamped, group: str = "ur5_arm"):
     js.position = [0.0] * 6
     req.ik_request.robot_state.joint_state = js
 
-    future = cli.call_async(req)
+    future = client.call_async(req)
     rclpy.spin_until_future_complete(node, future)
     res = future.result()
 
     if res.error_code.val != res.error_code.SUCCESS:
-        node.get_logger().error(f"IK fehlgeschlagen (Code {res.error_code.val})")
+        node.get_logger().error(f"IK failed (Error code {res.error_code.val})")
         return None
 
-    ik_dict = dict(
-        zip(res.solution.joint_state.name, res.solution.joint_state.position)
-    )
-    return [ik_dict[n] for n in js.name]
+    ik_map = dict(zip(res.solution.joint_state.name, res.solution.joint_state.position))
+    return [ik_map[name] for name in js.name]
 
 
 # ------------------------------------------------------------
-# Haupt-Node
+# Main node
 # ------------------------------------------------------------
 class CartesianCommanderUR5(Node):
     def __init__(self, pose_xyzrpy):
         super().__init__("cartesian_commander_ur5")
         self.pose_xyzrpy = pose_xyzrpy
 
-        # Action-Client
+        # Action client for FollowJointTrajectory
         self.act_client = ActionClient(
             self,
             FollowJointTrajectory,
@@ -100,16 +97,16 @@ class CartesianCommanderUR5(Node):
         pose.pose.orientation.z = qz
         pose.pose.orientation.w = qw
 
-        # 1) IK
+        # 1) Compute IK
         joint_positions = request_ik(self, pose)
         if joint_positions is None:
-            self.get_logger().error("Abbruch: IK lieferte keine Lösung.")
+            self.get_logger().error("Aborting: IK did not return a solution.")
             return
         self.get_logger().info(
-            "IK-Winkel: " + ", ".join(f"{j:+.3f}" for j in joint_positions)
+            "IK joint angles: " + ", ".join(f"{j:+.3f}" for j in joint_positions)
         )
 
-        # 2) Trajektorie
+        # 2) Build trajectory goal
         joint_names = [
             "shoulder_pan_joint",
             "shoulder_lift_joint",
@@ -125,18 +122,18 @@ class CartesianCommanderUR5(Node):
 
         pt = JointTrajectoryPoint()
         pt.positions = joint_positions
-        pt.time_from_start.sec = 3
+        pt.time_from_start.sec = 3  # 3-second trajectory
         traj.points.append(pt)
         goal.trajectory = traj
 
-        # 3) Senden & warten
-        self.get_logger().info("Sende Trajektorie an Controller …")
+        # 3) Send goal & wait for result
+        self.get_logger().info("Sending trajectory to controller…")
         send_future = self.act_client.send_goal_async(goal)
         rclpy.spin_until_future_complete(self, send_future)
         goal_handle = send_future.result()
 
         if not goal_handle.accepted:
-            self.get_logger().error("❌ Ziel vom Controller abgelehnt!")
+            self.get_logger().error("❌ Goal was rejected by the controller!")
             return
 
         result_future = goal_handle.get_result_async()
@@ -144,20 +141,20 @@ class CartesianCommanderUR5(Node):
         result = result_future.result().result
 
         if result.error_code == FollowJointTrajectory.Result.SUCCESSFUL:
-            self.get_logger().info("✅ Trajektorie erfolgreich ausgeführt")
+            self.get_logger().info("✅ Trajectory executed successfully")
         else:
             self.get_logger().error(
-                f"❌ Fehler bei Ausführung (Code {result.error_code})"
+                f"❌ Execution failed (Error code {result.error_code})"
             )
 
 
 # ------------------------------------------------------------
-# CLI-Einstieg
+# CLI entry point
 # ------------------------------------------------------------
 def main(argv=sys.argv[1:]):
     if len(argv) != 6:
         print(
-            "Aufruf:\n  ros2 run my_robot_control cartesian_commander_ur5 "
+            "Usage:\n  ros2 run my_robot_control cartesian_commander_ur5 "
             "<x> <y> <z> <roll> <pitch> <yaw>"
         )
         return

@@ -1,136 +1,83 @@
-my_robot_control
+````markdown
+# my_robot_control_ur5
 
-Ein ROS 2‑Paket zur kartesischen Steuerung eines Panda‑Roboters (Franka Emika) mit MoveIt 2. Es basiert auf der offiziellen MoveIt 2 Getting‑Started‑Demo und erweitert diese um eigene Commander‑Skripte sowie ein Werkzeug zur Trajektorien‑Visualisierung.
+This repository provides a ROS 2 package for controlling a UR5 robot arm with MoveIt and ros2_control. It includes a demonstration launch file and a Cartesian interpolation node that computes, visualizes, and prints trajectories to given target poses.
 
-Inhaltsverzeichnis
+## Prerequisites
 
-Voraussetzungen
+- Ubuntu 24.04 LTS (tested in WSL)
+- ROS 2 Jazzy
+- Python 3.12
+- MoveIt (running on `/compute_ik` and `/compute_fk` services)
+- A ros2_control-compatible UR5 controller (`/ur5_arm_controller/follow_joint_trajectory`)
 
-Installation
+## Installation
 
-Build & Setup
+1. Clone this repository into your ROS 2 workspace:
+   ```bash
+   cd ~/ros2_ws/src
+   git clone https://github.com/St3fanTh/ROS2Assignment.git my_robot_control_ur5
+````
 
-Wichtige Befehle
+2. Build the workspace:
+   ```bash
+   cd ~/ros2_ws
+   colcon build --packages-select my_robot_control_ur5
+   ```
+3. Source the workspace:
+   ```bash
+   source install/setup.bash
+   ```
 
-Paketübersicht
+## Getting Started
 
-Beispiele
+1. Launch the demo environment (robot, controllers, and MoveIt):
+   ```bash
+   ros2 launch my_robot_control_ur5 demo.launch.py
+   ```
+2. In a new terminal (after sourcing), run the Cartesian interpolation node with your target pose:
+   ```bash
+   ros2 run my_robot_control movelt_planning_obstacle 0.4 0.4 0.2 0.5 1.57 0
+   ```
+   - `<x> <y> <z>`: Cartesian position in meters
+   - `<roll> <pitch> <yaw>`: Orientation in radians
 
-Tipps für WSL 2
+This will:
 
-Weiterführendes
+- Compute inverse kinematics for each interpolated waypoint
+- Publish visualization markers on `/waypoint_markers`
+- Print each waypoint and joint solution to the console
+- Send the joint trajectory to `/ur5_arm_controller/follow_joint_trajectory`
 
-Lizenz
+## Nodes and Scripts
 
-Voraussetzungen
+- **demo.launch.py**: Launches the UR5 robot in simulation or on real hardware, brings up controllers, and MoveIt services.
+- **movelt\_planning\_obstacle**: Node that reads a target pose, interpolates a Cartesian path, requests IK/FK, publishes markers, and executes the trajectory.
 
-Betriebssystem: Ubuntu 24.04 LTS unter Windows Subsystem for Linux 2 (WSL 2) ✻(natürlich läuft das Paket auch auf nativem Linux; nur RViz‑GUI erfordert X11/Wayland)
+> **Note:** The following scripts were used for testing purposes and are **not** relevant to the main demo:
+>
+> - `add_box_obstacle.py`: publishes a green square obstacle
+> - `cartesian_commander_panda.py` & `cartesian_commander_ur5.py`: Cartesian commanding test scripts for Panda and UR5 arms
+> - `home_commander_panda.py` & `home_commander_ur5.py`: Home position commanding test scripts for Panda and UR5 arms
 
-ROS 2 Distribution: Jazzy Jenkins
+## Troubleshooting
 
-MoveIt 2: installiert für Jazzy (apt oder Quellcode)
+- Ensure MoveIt IK/FK services (`/compute_ik`, `/compute_fk`) are available.
+- Verify the controller `/ur5_arm_controller/follow_joint_trajectory` is active.
+- If no `/joint_states` are received, the node will default to a pre-defined home pose.
 
-Python ≥ 3.12
+## License
 
-Benötigte ROS‑Pakete werden automatisch via rosdep aufgelöst, etwa
+This project is released under the MIT License.
 
-sudo apt install ros-jazzy-desktop-full ros-jazzy-moveit-full
+The MIT License is a permissive open-source license that allows you to freely use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. It requires that the original copyright and license notice be included in all copies or substantial portions of the software.
 
-Installation
+**Key points of the MIT License:**
 
-# Workspace anlegen
-mkdir -p ~/ws_my_robot/src && cd ~/ws_my_robot/src
+- **Freedom**: You can use the software for any purpose.
+- **Permissive**: You can integrate the software into proprietary products.
+- **Notice requirement**: You must include the license text and copyright notice.
+- **No warranty**: The software is provided "as is", without warranty of any kind.
 
-git clone <DEIN_FORK_ODER_REPO>/my_robot_control.git
-
-# Abhängigkeiten auflösen
-cd ~/ws_my_robot
-rosdep install --from-paths src -y --rosdistro jazzy
-
-Build & Setup
-
-cd ~/ws_my_robot
-colcon build --packages-select my_robot_control
-
-# Workspace einrichten (jedes neue Terminal!)
-source install/setup.bash
-
-Wichtige Befehle
-
-Zweck
-
-Befehl
-
-Arm in Home‑Pose bringen
-
-ros2 run my_robot_control home_commander
-
-Kartesische Ziel‑Pose anfahren (x y z qx qy qz / yaw‑only‑Variante)
-
-ros2 run my_robot_control cartesian_commander 0.2 0.3 0.2 0 0 1.57
-
-Trajektorie live aus RViz 2 oder Bag‑File visualisieren
-
-ros2 run my_robot_control trajectory_visualizer
-
-Demo‑Launch mit MoveIt Task Constructor
-
-ros2 launch moveit_task_constructor_demo demo.launch.py
-
-Alle Befehle setzen voraus, dass das vorherige source install/setup.bash ausgeführt wurde.
-
-Paketübersicht
-
-Datei / Ordner
-
-Zweck
-
-cartesian_commander.py
-
-Liest Zielpose von CLI‑Argumenten, plant kollisionsfreie Trajektorie mit MoveIt 2 und sendet sie an den Panda‑Arm.
-
-home_commander.py
-
-Fährt den Roboter in eine vordefinierte Home‑Position.
-
-trajectory_visualizer.py
-
-Subscribt display_planned_path, extrahiert Joint‑Trajektorien und zeigt Winkel‑vs‑Zeit‑Plots (matplotlib).
-
-launch/
-
-Beispiel‑Launchdateien, z. B. panda_demo.launch.py.
-
-Beispiele
-
-Pick‑&‑Place Mini‑Flow
-
-ros2 launch my_robot_control panda_demo.launch.py execute:=false
-# zweites Terminal
-ros2 run my_robot_control cartesian_commander 0.5 0.0 0.25 0 0 0
-ros2 run my_robot_control cartesian_commander 0.5 0.2 0.15 0 0 1.57
-ros2 run my_robot_control home_commander
-
-Trajektorienanalyse aus Bag‑File
-
-ros2 run my_robot_control trajectory_visualizer --bag ~/logs/latest
-
-Tipps für WSL 2
-
-Echtzeit‑Performance: Deaktiviere Windows Fast Startup und prüfe .wslconfig (CPU‑Kerne & RAM).
-
-GUI: WSLg unter Ubuntu 24.04 enthält Wayland‑Server – RViz 2 startet ohne zusätzliche X‑Server.
-
-USB‑Passthrough: Für echte Panda‑Hardware empfiehlt sich Linux‑Dual‑Boot oder eine VM mit PCIe‑Passthrough.
-
-Weiterführendes
-
-MoveIt 2 Tutorials
-
-Franka Control Interface
-
-ROS 2 Jazzy Doku
-
-Lizenz
-
-Apache 2.0 – siehe LICENSE.
+```
+```

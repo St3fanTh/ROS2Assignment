@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""
-cartesian_commander.py
 
-Bewegt den Panda-Arm zu einer kartesischen Zielpose (x y z R P Y),
-nutzt MoveIt's IK-Service '/compute_ik' und sendet die Trajektorie
-an den Controller '/panda_arm_controller/follow_joint_trajectory'.
-"""
 import sys
 import math
 import rclpy
@@ -18,15 +12,14 @@ from control_msgs.action import FollowJointTrajectory
 from moveit_msgs.srv import GetPositionIK
 from sensor_msgs.msg import JointState
 from tf_transformations import quaternion_from_euler
-from trajectory_msgs.msg import JointTrajectory
 
 # ------------------------------------------------------------
-# Hilfsfunktion: IK anfragen
+# Helper function: request inverse kinematics
 # ------------------------------------------------------------
 def request_ik(node: Node, pose: PoseStamped, group: str = "panda_arm"):
-    cli = node.create_client(GetPositionIK, "/compute_ik")
-    if not cli.wait_for_service(timeout_sec=5.0):
-        node.get_logger().error("Service /compute_ik nicht verfügbar!")
+    client = node.create_client(GetPositionIK, "/compute_ik")
+    if not client.wait_for_service(timeout_sec=5.0):
+        node.get_logger().error("Service /compute_ik not available!")
         return None
 
     req = GetPositionIK.Request()
@@ -34,40 +27,41 @@ def request_ik(node: Node, pose: PoseStamped, group: str = "panda_arm"):
     req.ik_request.pose_stamped = pose
     req.ik_request.timeout = Duration(seconds=5).to_msg()
 
-    # Seed-State setzen (Startposition für IK)
+    # Set seed state (start position for IK)
     js = JointState()
     js.name = [
         "panda_joint1", "panda_joint2", "panda_joint3",
         "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"
     ]
-    js.position = [0.0] * 7  # Startpose: "Nullstellung" – kann angepasst werden
+    js.position = [0.0] * 7  # Home pose: all zeros (adjustable)
     req.ik_request.robot_state.joint_state = js
 
-    future = cli.call_async(req)
+    future = client.call_async(req)
     rclpy.spin_until_future_complete(node, future)
     res = future.result()
     if res.error_code.val != res.error_code.SUCCESS:
-        node.get_logger().error(f"IK fehlgeschlagen (Code {res.error_code.val})")
+        node.get_logger().error(f"IK failed (Error code {res.error_code.val})")
         return None
 
-    # Gelenkwerte herausfiltern (nur die Panda-Gelenke)
+    # Extract joint values (only Panda arm joints)
     joint_names = js.name
-    ik_dict = dict(zip(res.solution.joint_state.name, res.solution.joint_state.position))
-    filtered_positions = [ik_dict.get(name, 0.0) for name in joint_names]
+    ik_map = dict(zip(res.solution.joint_state.name, res.solution.joint_state.position))
+    filtered_positions = [ik_map.get(name, 0.0) for name in joint_names]
 
     return filtered_positions
 
 # ------------------------------------------------------------
-# Haupt-Node
+# Main node: sends Cartesian pose as a joint trajectory
 # ------------------------------------------------------------
 class CartesianCommander(Node):
     def __init__(self, pose_xyzrpy):
         super().__init__("cartesian_commander")
         self.pose_xyzrpy = pose_xyzrpy
-        
+
+        # Publisher for raw JointTrajectory messages
         self.traj_pub = self.create_publisher(JointTrajectory, "/arm_trajectory", 10)
-        
-        # Action-Client starten
+
+        # Action client for the FollowJointTrajectory action
         self.act_client = ActionClient(
             self,
             FollowJointTrajectory,
@@ -75,79 +69,83 @@ class CartesianCommander(Node):
         )
         self.act_client.wait_for_server()
 
-        # Pose → IK → Trajektorie
+        # Immediately send the pose
         self.send_pose()
 
     def send_pose(self):
         x, y, z, roll, pitch, yaw = self.pose_xyzrpy
+
+        # Build the PoseStamped in the world frame
         pose = PoseStamped()
         pose.header.frame_id = "world"
         pose.pose.position.x = x
         pose.pose.position.y = y
         pose.pose.position.z = z
         q = quaternion_from_euler(roll, pitch, yaw)
-        pose.pose.orientation.x, pose.pose.orientation.y, \
-        pose.pose.orientation.z, pose.pose.orientation.w = q
+        (pose.pose.orientation.x,
+         pose.pose.orientation.y,
+         pose.pose.orientation.z,
+         pose.pose.orientation.w) = q
 
-        # 1) IK anfragen
+        # 1) Request IK
         joint_positions = request_ik(self, pose)
         if joint_positions is None:
-            self.get_logger().error("Abbruch: IK lieferte keine Lösung.")
+            self.get_logger().error("Aborting: IK did not return a solution.")
             return
-        self.get_logger().info(f"IK-Winkel: {[round(j, 3) for j in joint_positions]}")
+        self.get_logger().info(f"IK joint angles: {[round(j, 3) for j in joint_positions]}")
 
-        # 2) Trajektorie bauen
+        # 2) Build the trajectory message
         joint_names = [
             "panda_joint1", "panda_joint2", "panda_joint3",
             "panda_joint4", "panda_joint5", "panda_joint6", "panda_joint7"
         ]
-
-        goal = FollowJointTrajectory.Goal()
         traj = JointTrajectory()
         traj.joint_names = joint_names
 
-        pt = JointTrajectoryPoint()
-        pt.positions = joint_positions
-        pt.time_from_start.sec = 3
-        traj.points.append(pt)
+        point = JointTrajectoryPoint()
+        point.positions = joint_positions
+        point.time_from_start.sec = 3  # 3-second motion
+        traj.points.append(point)
 
+        # Publish the raw trajectory (optional)
         self.traj_pub.publish(traj)
 
+        # Prepare and send the FollowJointTrajectory goal
+        goal = FollowJointTrajectory.Goal()
         goal.trajectory = traj
 
-
-
-        self.get_logger().info("Sende Trajektorie an Controller …")
+        self.get_logger().info("Sending trajectory to controller…")
         for name, val in zip(joint_names, joint_positions):
             self.get_logger().info(f"  {name}: {round(val, 3)} rad")
 
-        # 3) Ziel senden & warten
-        future = self.act_client.send_goal_async(goal)
-        rclpy.spin_until_future_complete(self, future)
-        goal_handle = future.result()
+        # 3) Send goal and wait for execution
+        send_future = self.act_client.send_goal_async(goal)
+        rclpy.spin_until_future_complete(self, send_future)
+        goal_handle = send_future.result()
 
         if not goal_handle.accepted:
-            self.get_logger().error("Ziel wurde vom Controller abgelehnt!")
+            self.get_logger().error("Goal was rejected by the controller!")
             return
 
-        self.get_logger().info("Ziel akzeptiert. Warte auf Ausführung …")
+        self.get_logger().info("Goal accepted. Waiting for execution…")
         result_future = goal_handle.get_result_async()
         rclpy.spin_until_future_complete(self, result_future)
         result = result_future.result()
 
         if result.result.error_string:
-            self.get_logger().warn(f"Fehlerstring vom Controller: {result.result.error_string}")
+            self.get_logger().warn(f"Controller error string: {result.result.error_string}")
         else:
-            self.get_logger().info("Trajektorie erfolgreich ausgeführt ✅")
+            self.get_logger().info("Trajectory executed successfully ✅")
 
 # ------------------------------------------------------------------
-# CLI-Einstieg
+# CLI entry point
 # ------------------------------------------------------------------
 def main(argv=sys.argv[1:]):
     if len(argv) != 6:
-        print("Aufruf: ros2 run my_robot_control cartesian_commander <x> <y> <z> <roll> <pitch> <yaw>")
+        print("Usage: ros2 run my_robot_control cartesian_commander <x> <y> <z> <roll> <pitch> <yaw>")
         return
 
+    # Parse the 6 pose parameters
     pose_vals = [float(v) for v in argv]
     rclpy.init()
     node = CartesianCommander(pose_vals)
