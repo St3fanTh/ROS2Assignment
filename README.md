@@ -66,3 +66,11 @@ This will:
 - Verify the controller `/ur5_arm_controller/follow_joint_trajectory` is active.
 - If no `/joint_states` are received, the node will default to a pre-defined home pose.
 
+## Tests
+
+To run the unit tests for this package, use the following command:
+   ```bash
+python3 -m unittest discover -s test -v
+   ```
+Ensure you have all dependencies installed and sourced before running the tests.
+
