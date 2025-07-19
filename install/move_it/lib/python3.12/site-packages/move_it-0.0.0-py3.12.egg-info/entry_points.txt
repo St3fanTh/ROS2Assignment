@@ -1,2 +1,0 @@
-[console_scripts]
-cartesian_mover = move_it.cartesian_mover:main

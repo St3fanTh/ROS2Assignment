@@ -1,9 +1,0 @@
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/uninstall.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/my_robot_control_ur5_uninstall.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/test.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/edit_cache.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/rebuild_cache.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/list_install_components.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/install.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/install/local.dir
-/home/login/ws_moveit/build/my_robot_control_ur5/CMakeFiles/install/strip.dir
